@@ -1,0 +1,181 @@
+{
+  "title": "Shopkeepsimulation#1",
+  "description": "",
+  "properties": [],
+  "root": {
+    "id": 1,
+    "name": "ESelector-greeting ",
+    "title": "ESelector",
+    "type": 3,
+    "description": "",
+    "parameter": [],
+    "children": [
+      {
+        "id": 2,
+        "name": "Greeting#1",
+        "title": "Action",
+        "type": 2,
+        "description": "Good Day sir",
+        "parameters": [],
+        "probabilityOfSuccess": "positive",
+        "children": [
+          {
+            "id": 4,
+            "name": "Popup#1",
+            "title": "Playerchoice",
+            "type": 5,
+            "description": "choose good or bad",
+            "parameters": [
+              "#1 This is a great shop",
+              "#2 This is a terible shop"
+            ],
+            "children": [
+              {
+                "id": 5,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "parameters": [
+                  "joy",
+                  "distress"
+                ],
+                "trigger": [
+                  " #1 This is a great shop",
+                  "#2 This is a terible shop"
+                ],
+                "children": [
+                  {
+                    "id": 6,
+                    "name": "Popup#2",
+                    "title": "Playerchoice",
+                    "type": 5,
+                    "description": "ask price of bread",
+                    "parameters": [
+                      "#1 What is the price of bread?"
+                    ],
+                    "children": [
+                      {
+                        "id": 7,
+                        "name": "ESelector-selling",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                          {
+                            "id": 8,
+                            "name": "selling#1",
+                            "title": "Action",
+                            "type": 2,
+                            "description": "The price is 5 gold",
+                            "parameters": [],
+                            "probabilityOfSuccess": "positive",
+                            "children": []
+                          },
+                          {
+                            "id": 9,
+                            "name": "selling#2",
+                            "title": "Action",
+                            "type": 2,
+                            "description": "The price is 10 gold",
+                            "parameters": [],
+                            "probabilityOfSuccess": "negative",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Greeting#2",
+        "title": "Action",
+        "type": 2,
+        "description": "*grunts*",
+        "parameters": [],
+        "probabilityOfSuccess": "negative",
+        "children": [
+          {
+            "id": 4,
+            "name": "Popup#1",
+            "title": "Playerchoice",
+            "type": 5,
+            "description": "choose good or bad",
+            "parameters": [
+              "#1 This is a great  shop",
+              "#2 This is a terible shop"
+            ],
+            "children": [
+              {
+                "id": 5,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "parameters": [
+                  "joy",
+                  "distress"
+                ],
+                "trigger": [
+                  " #1 This is a great shop",
+                  "#2 This is a terible shop"
+                ],
+                "children": [
+                  {
+                    "id": 6,
+                    "name": "Popup#2",
+                    "title": "Playerchoice",
+                    "type": 5,
+                    "description": "ask price of bread",
+                    "parameters": [
+                      "#1 What is the price of bread"
+                    ],
+                    "children": [
+                      {
+                        "id": 7,
+                        "name": "ESelector-selling",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                          {
+                            "id": 8,
+                            "name": "selling#1",
+                            "title": "Action",
+                            "type": 2,
+                            "description": "The price is 5 gold",
+                            "parameters": [],
+                            "probabilityOfSuccess": "positive",
+                            "children": []
+                          },
+                          {
+                            "id": 9,
+                            "name": "selling#2",
+                            "title": "Action",
+                            "type": 2,
+                            "description": "The price is 10 gold",
+                            "parameters": [],
+                            "probabilityOfSuccess": "negative",
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

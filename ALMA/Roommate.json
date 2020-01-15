@@ -1,0 +1,158 @@
+{
+    "title": "Roommate#1",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "Popup#1 ",
+        "title": "Playerchoice",
+        "type": 5,
+        "description": "Decide if to discuss the heat or if to change it without discussing",
+        "parameters": [
+            "#1- Can we turn the heater up at night",
+            "#2- I've turned the heat up"
+        ],
+        "children": [
+            {
+                "id": 2,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "parameters": [
+                    "admiration",
+                    "reproach"
+                ],
+                "trigger": [
+                    "#1 Discussed heat with molly",
+                    "#2 Turns the heat up"
+                ],
+                "children": [
+                    {
+                        "id": 3,
+                        "name": "convo#1",
+                        "title": "Action",
+                        "type": 2,
+                        "description": "That will increase the cost of utilities ",
+                        "parameters": [],
+                        "probabilityOfSuccess": "positive",
+                        "children": [
+                            {
+                                "id": 4,
+                                "name": "Popup#1 ",
+                                "title": "Playerchoice",
+                                "type": 5,
+                                "description": "Decide if to discuss the heat or if to change it without discussing",
+                                "parameters": [
+                                    "#1 I am willing to cover the extra cost "
+                                ],
+                                "children": [
+                                    {
+                                        "id": 5,
+                                        "name": "ESelector",
+                                        "title": "ESelector",
+                                        "type": 3,
+                                        "description": "",
+                                        "parameter": [],
+                                        "children": [
+                                            {
+                                                "id": 6,
+                                                "name": "result#1",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "Thats is fine you can turn the heat up ",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "positive",
+                                                "children": []                                                       
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "result#2",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "I dont want the heat changed",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "negative",
+                                                "children": []                                              
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "parameters": [
+                    "admiration",
+                    "reproach"
+                ],
+                "trigger": [
+                    "#1 Discussed heat with molly",
+                    "#2 Turns the heat up"
+                ],
+                "children": [
+                    {
+                        "id": 3,
+                        "name": "convo#2",
+                        "title": "Action",
+                        "type": 2,
+                        "description": "why did you turn up the heat? that will increase the cost of utilities  ",
+                        "parameters": [],
+                        "probabilityOfSuccess": "negative",
+                        "children": [
+                            {
+                                "id": 4,
+                                "name": "Popup#1 ",
+                                "title": "Playerchoice",
+                                "type": 5,
+                                "description": "Arguee abou the heat",
+                                "parameters": [
+                                    "#1- I wanted it up so I turned it up, do you have a problem with that? "
+                                ],
+                                "children": [
+                                    {
+                                        "id": 5,
+                                        "name": "ESelector",
+                                        "title": "ESelector",
+                                        "type": 3,
+                                        "description": "",
+                                        "parameter": [],
+                                        "children": [
+                                            {
+                                                "id": 6,
+                                                "name": "result#1",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "Thats is fine you can turn the heat up ",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "positive",
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "result#2",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "I dont want the heat changed",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "negative",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

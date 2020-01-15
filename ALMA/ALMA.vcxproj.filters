@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\emotion">
+      <UniqueIdentifier>{42ec3941-0394-4461-aabd-77bac879d82d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\mood">
+      <UniqueIdentifier>{5f42eb45-79d4-4dad-bc7e-ad1e81164eda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\appriaisal">
+      <UniqueIdentifier>{0d38a02d-6052-43a8-a1f8-0d8640f618c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\compute">
+      <UniqueIdentifier>{3a373aba-e094-4dd8-a93b-d7eea63b200b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\appriaisal\eec">
+      <UniqueIdentifier>{1586dada-3a6c-4823-9946-f8cc437818ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\manage">
+      <UniqueIdentifier>{d681c97b-2cc4-4a05-b745-8d557b049c75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\data">
+      <UniqueIdentifier>{6d865e8f-dd35-48db-987a-d0d3707c0cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\personality">
+      <UniqueIdentifier>{938cee8f-a900-4e68-94bf-beb77138665d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Memory">
+      <UniqueIdentifier>{631213ea-4764-480b-a2b3-f21381d49b74}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Personality\PersonalityEmotionsRelations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviorTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="charactermanager.cpp">
+      <Filter>Resource Files\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="AppraisalManager.cpp">
+      <Filter>Resource Files\manage</Filter>
+    </ClCompile>
+    <ClCompile Include="compute\EmotionEngine.cpp">
+      <Filter>Resource Files\compute</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="timer_manager.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="asynctimerqueue.hh">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\eec\Agency.h">
+      <Filter>Resource Files\appriaisal\eec</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\eec\Appealingness.h">
+      <Filter>Resource Files\appriaisal\eec</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\eec\Desirability.h">
+      <Filter>Resource Files\appriaisal\eec</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\eec\Likelihood.h">
+      <Filter>Resource Files\appriaisal\eec</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\eec\Liking.h">
+      <Filter>Resource Files\appriaisal\eec</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\eec\Praiseworthiness.h">
+      <Filter>Resource Files\appriaisal\eec</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\eec\Realization.h">
+      <Filter>Resource Files\appriaisal\eec</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\apprasialvariables.h">
+      <Filter>Resource Files\appriaisal</Filter>
+    </ClInclude>
+    <ClInclude Include="Apprasial\eec.h">
+      <Filter>Resource Files\appriaisal</Filter>
+    </ClInclude>
+    <ClInclude Include="compute\decayfunction.h">
+      <Filter>Resource Files\compute</Filter>
+    </ClInclude>
+    <ClInclude Include="compute\EmotionEngine.h">
+      <Filter>Resource Files\compute</Filter>
+    </ClInclude>
+    <ClInclude Include="compute\exponentialdecayfunction.h">
+      <Filter>Resource Files\compute</Filter>
+    </ClInclude>
+    <ClInclude Include="compute\linerdecayfunction.h">
+      <Filter>Resource Files\compute</Filter>
+    </ClInclude>
+    <ClInclude Include="compute\moodengine.h">
+      <Filter>Resource Files\compute</Filter>
+    </ClInclude>
+    <ClInclude Include="compute\tangenshyperbolicusdecayfunction.h">
+      <Filter>Resource Files\compute</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\AffectConsts.h">
+      <Filter>Resource Files\data</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotions\emotion.h">
+      <Filter>Resource Files\emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotions\EmotionAppraisalVars.h">
+      <Filter>Resource Files\emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotions\EmotionHistory.h">
+      <Filter>Resource Files\emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotions\EmotionPADCentroid.h">
+      <Filter>Resource Files\emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotions\emotionspadrelation.h">
+      <Filter>Resource Files\emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotions\EmotionType.h">
+      <Filter>Resource Files\emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotions\EmotionVector.h">
+      <Filter>Resource Files\emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotions\PADEmotion.h">
+      <Filter>Resource Files\emotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Manage\appraisalrules.h">
+      <Filter>Resource Files\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="Manage\charactermanager.h">
+      <Filter>Resource Files\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="Manage\entitymanager.h">
+      <Filter>Resource Files\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="Mood\Mood.h">
+      <Filter>Resource Files\mood</Filter>
+    </ClInclude>
+    <ClInclude Include="Personality\Personality.h">
+      <Filter>Resource Files\personality</Filter>
+    </ClInclude>
+    <ClInclude Include="Personality\PersonalityEmotionsRelations.h">
+      <Filter>Resource Files\personality</Filter>
+    </ClInclude>
+    <ClInclude Include="Personality\PersonalityMoodRelations.h">
+      <Filter>Resource Files\personality</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviorTree.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AppraisalManager.h">
+      <Filter>Resource Files\manage</Filter>
+    </ClInclude>
+    <ClInclude Include="Narrator.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LUDecomposition.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QRDecomposition.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.h">
+      <Filter>Resource Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="MemStructs.h">
+      <Filter>Resource Files\Memory</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

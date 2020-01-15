@@ -1,0 +1,231 @@
+{
+  "title": "OpenDoor",
+  "description": "",
+  "properties": { },
+  "root": {
+    "id": 1,
+    "name": "doorSelector0",
+    "title": "Selector",
+    "type": 0,
+    "description": "",
+    "parameter": { },
+    "children": [
+      {
+        "id": 2,
+        "name": "doorSequence0",
+        "title": "Sequence",
+        "type": 1,
+        "description": "",
+        "parameters": { },
+        "children": [
+          {
+            "id": 4,
+            "name": "walkToDoor",
+            "title": "Action",
+            "type": 2,
+            "description": "walk to the door",
+            "parameters": {
+              "probabilityOfSuccess": 99
+            },
+            "children": [ ]
+          },
+          {
+            "id": 5,
+            "name": "doorSelector1",
+            "title": "Selector",
+            "type": 1,
+            "description": "",
+            "parameters": { },
+            "children": [
+              {
+                "id": 8,
+                "name": "openDoor",
+                "title": "Action",
+                "type": 2,
+                "description": "open door",
+                "parameters": {
+                  "probabilityOfSuccess": 15
+                },
+                "children": [ ]
+              },
+              {
+                "id": 9,
+                "name": "doorSelector1",
+                "title": "Selector",
+                "type": 1,
+                "description": "",
+                "parameters": { },
+                "children": [
+                  {
+                    "id": 11,
+                    "name": "unlockDoor",
+                    "title": "Action",
+                    "type": 1,
+                    "description": "unlock door",
+                    "parameters": {
+                      "probabilityOfSuccess": 25
+                    },
+                    "children": [ ]
+                  },
+                  {
+                    "id": 12,
+                    "name": "openDoor",
+                    "title": "Action",
+                    "type": 2,
+                    "description": "open door after unlocking",
+                    "parameters": {
+                      "probabilityOfSuccess": 99
+                    },
+                    "children": [ ]
+                  }
+
+                ]
+              },
+              {
+                "id": 10,
+                "name": "smashDoor",
+                "title": "Action",
+                "type": 2,
+                "description": "smash door",
+                "parameters": {
+                  "probabilityOfSuccess": 60
+                },
+                "children": [ ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "name": "walkThroughDoor",
+            "title": "Action",
+            "type": 2,
+            "description": "walk through door",
+            "parameters": {
+              "probabilityOfSuccess": 60
+            },
+            "children": [ ]
+          },
+          {
+            "id": 7,
+            "name": "closeDoor",
+            "title": "Action",
+            "type": 2,
+            "description": "close the door",
+            "parameters": {
+              "probabilityOfSuccess": 100
+            },
+            "children": [ ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "doorSequence2",
+        "title": "Sequence",
+        "type": 1,
+        "description": "",
+        "parameters": { },
+        "children": [
+
+          {
+            "id": 13,
+            "name": "walkTOWindow",
+            "title": "Action",
+            "type": 2,
+            "description": "walk to window",
+            "parameters": {
+              "probabilityOfSuccess": 99
+            },
+            "children": [ ]
+          },
+          {
+            "id": 14,
+            "name": "doorSelector2",
+            "title": "Selector",
+            "type": 0,
+            "description": "",
+            "parameters": { },
+            "children": [
+              {
+                "id": 17,
+                "name": "openWindow",
+                "title": "Action",
+                "type": 2,
+                "description": "open window",
+                "parameters": {
+                  "probabilityOfSuccess": 70
+                },
+                "children": [ ]
+              },
+              {
+                "id": 18,
+                "name": "doorSequence3",
+                "title": "Sequence",
+                "type": 1,
+                "description": "",
+                "parameters": { },
+                "children": [
+                  {
+                    "id": 20,
+                    "name": "unlockWindow",
+                    "title": "Action",
+                    "type": 2,
+                    "description": "unlock window",
+                    "parameters": {
+                      "probabilityOfSuccess": 65
+                    },
+                    "children": [ ]
+                  },
+                  {
+                    "id": 21,
+                    "name": "openWindow2",
+                    "title": "Action",
+                    "type": 2,
+                    "description": "open window after unlocking",
+                    "parameters": {
+                      "probabilityOfSuccess": 85
+                    },
+                    "children": [ ]
+                  }
+                ]
+              },
+              {
+                "id": 19,
+                "name": "smashWindow",
+                "title": "Action",
+                "type": 2,
+                "description": "smash window",
+                "parameters": {
+                  "probabilityOfSuccess": 95
+                },
+                "children": [ ]
+              }
+            ]
+          },
+          {
+            "id": 15,
+            "name": "climbThroughWindow",
+            "title": "Action",
+            "type": 2,
+            "description": "climb through window",
+            "parameters": {
+              "probabilityOfSuccess": 85
+            },
+            "children": [ ]
+          },
+          {
+            "id": 16,
+            "name": "closeWindow",
+            "title": "Action",
+            "type": 2,
+            "description": "close window",
+            "parameters": {
+              "probabilityOfSuccess": 100
+            },
+            "children": [ ]
+          }
+        ]
+      }
+    ]
+  }
+}

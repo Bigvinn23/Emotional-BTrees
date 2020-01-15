@@ -1,0 +1,554 @@
+{
+    "title": "Introduction",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "Popup#1 ",
+        "title": "Playerchoice",
+        "type": 5,
+        "description": "intro the npc",
+        "parameters": [
+            "#1- This is my other great partner ",
+            "#2- This is my other helper "
+        ],
+        "children": [
+            {
+                "id": 2,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "joy",
+                    "disappointment"
+                ],
+                "trigger": [
+                    "#1 Player compliments NPC",
+                    "#2 Player is rude to NPC"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "thanks",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "Thank you sir",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- It is alright",
+                                            "#2- Remember i made you look good"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "satisfaction",
+                                                    "disliking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You are the best",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "notthanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Doubtful",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "satisfaction",
+                                                    "disliking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "So nice of you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "notthanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Doubtful",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "thats right",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "Is that so ",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- It is alright",
+                                            "#2- Remember i made you look good"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "satisfaction",
+                                                    "disliking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "So nice of you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "notthanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Doubtful",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "satisfaction",
+                                                    "disliking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "So nice of you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "notthanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Doubtful",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3, 
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "joy",
+                    "disappointment"
+                ],
+                "trigger": [
+                    "#1 Player compliments NPC",
+                    "#2 Player is rude to NPC"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "rebuke",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I will never be considered your servant",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- I did not mean to offend you",
+                                            "#2- You are nothing but what I say you are"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "relief",
+                                                    "anger"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Acceptable",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We shall see what is what",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "relief",
+                                                    "anger"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Acceptable",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We shall see what is what",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "suck up",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I am bit more than that am I not",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- I did not mean to offend you",
+                                            "#2- You are nothing but what I say you are"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "relief",
+                                                    "anger"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Acceptable",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We shall see what is what",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "relief",
+                                                    "anger"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Acceptable",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We shall see what is what",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

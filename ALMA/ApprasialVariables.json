@@ -1,0 +1,337 @@
+{
+    "children":
+    
+    [
+        {
+            "type":"EEC",
+            "signal": "Admiration",
+            "Desirability":0,
+            "Praiseworthiness":0.5,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "EventDisconfirmed",
+            "Desirability":0,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0.1,
+            "Agency":"",
+            "Likin":1
+        },
+        {
+            "type":"EEC",
+            "signal": "Pride",
+            "Desirability":0,
+            "Praiseworthiness":0.4,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"self",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Distress",
+            "Desirability":-0.7,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"self",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Resentment",
+            "Desirability":-1.0,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":1.0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Pity",
+            "Desirability":-1.0,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":1.0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Fear",
+            "Desirability":-1.0,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":1.0,
+            "Realization":0,
+            "Agency":"self",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Liking",
+            "Desirability":0,
+            "Praiseworthiness":0,
+            "Appealingness":0.6,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Reproach",
+            "Desirability":0,
+            "Praiseworthiness":-0.5,
+            "Appealingness":0.0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"self",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "BadEventForGoodOther",
+            "Desirability":-0.2,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":0.8
+        },
+        {
+            "type":"EEC",
+            "signal": "BadUnlikelyFutureEvent",
+            "Desirability":-1.0,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":-0.5,
+            "Realization":0,
+            "Agency":"",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Hope",
+            "Desirability":0.8,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0.2,
+            "Realization":0,
+            "Agency":"",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Gloating",
+            "Desirability":-0.2,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":-0.8
+        },
+        {
+            "type":"EEC",
+            "signal": "Disliking",
+            "Desirability":0,
+            "Praiseworthiness":0,
+            "Appealingness":-0.6,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "EventConfirmed",
+            "Desirability":0,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":1,
+            "Agency":"",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "Shame",
+            "Desirability":0,
+            "Praiseworthiness":-0.9,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"self",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "GoodEventForBadOther",
+            "Desirability":0.7,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":-0.8
+        },
+        {
+            "type":"EEC",
+            "signal": "GoodUnlikelyFutureEvent",
+            "Desirability":0.9,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":-1.0,
+            "Realization":0,
+            "Agency":"",
+            "Likin":0
+        },
+        {
+            "type":"EEC",
+            "signal": "HappyFor",
+            "Desirability":0.7,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":0.8
+        },
+        {
+            "type":"EEC",
+            "signal": "Anger",
+            "Desirability":0,
+            "Praiseworthiness":-0.7,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":1
+        },
+        {
+            "type":"EEC",
+            "signal": "Hate",
+            "Desirability":0.0,
+            "Praiseworthiness":-0.5,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":-0.5
+        },
+        {
+            "type":"EEC",
+            "signal": "Remorse",
+            "Desirability":-0.7,
+            "Praiseworthiness":-0.5,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"self  ",
+            "Likin":0.0
+        },
+        {
+            "type":"EEC",
+            "signal": "Gratification",
+            "Desirability":0.5,
+            "Praiseworthiness":0.5,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"self",
+            "Likin":0.0
+        },
+        {
+            "type":"EEC",
+            "signal": "Gratitude",
+            "Desirability":0.5,
+            "Praiseworthiness":0.5,
+            "Appealingness":0,
+            "Likelihood":0,
+            "Realization":0,
+            "Agency":"other",
+            "Likin":0.0
+        },
+        {
+            "type":"EEC",
+            "signal": "Disappointment",
+            "Desirability":-0.5,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":-0.5,
+            "Realization":0.1,
+            "Agency":"self",
+            "Likin":0.0
+        },
+        {
+            "type":"EEC",
+            "signal": "FearsConfirmed",
+            "Desirability":-0.5,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":-0.5,
+            "Realization":0.1,
+            "Agency":"self",
+            "Likin":0.0
+        },
+        {
+            "type":"EEC",
+            "signal": "Relief",
+            "Desirability":0.5,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0.5,
+            "Realization":0.1,
+            "Agency":"self",
+            "Likin":0.0
+        },
+        {
+            "type":"EEC",
+            "signal": "Satisfaction",
+            "Desirability":0.7,
+            "Praiseworthiness":0,
+            "Appealingness":0,
+            "Likelihood":0.5,
+            "Realization":0.1,
+            "Agency":"self",
+            "Likin":0.0
+        },
+        {
+            "type":"EEC",
+            "signal": "Love",
+            "Desirability":0.0,
+            "Praiseworthiness":0.5,
+            "Appealingness":0,
+            "Likelihood":0.0,
+            "Realization":0.0,
+            "Agency":"other",
+            "Likin":0.5
+        },
+        {
+            "type":"EEC",
+            "signal": "Joy",
+            "Desirability":0.5,
+            "Praiseworthiness":0.0,
+            "Appealingness":0,
+            "Likelihood":0.0,
+            "Realization":0.0,
+            "Agency":"self",
+            "Likin":0.0
+        }
+
+    ]
+}

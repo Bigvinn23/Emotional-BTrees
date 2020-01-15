@@ -1,0 +1,554 @@
+{
+    "title": "Introduction",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "Popup#1 ",
+        "title": "Playerchoice",
+        "type": 5,
+        "description": "tell a story",
+        "parameters": [
+            "#1- I also haev a funny story about NPC2",
+            "#2- NPC2 once did this amazing thing, listen"
+        ],
+        "children": [
+            {
+                "id": 2,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "distress",
+                    "gratitude"
+                ],
+                "trigger": [
+                    "#1 funnny story",
+                    "#2 amazing story"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "gets to me",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "haha i like this one",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Its a great story",
+                                            "#2- We could all use a laugh "
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "liking",
+                                                    "reproach"
+                                                ],
+                                                "trigger": [
+                                                    "#1 i know you like it",
+                                                    "#2 most fun"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "funny",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Haha funny",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "hate it",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "That wasn't needed",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "liking",
+                                                    "reproach"
+                                                ],
+                                                "trigger": [
+                                                    "#1 i know you like it",
+                                                    "#2 most fun"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "funny",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Haha funny",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "hate it",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "That wasn't needed",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "can't believe",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I can't believe you would tell that story",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Its a great story",
+                                            "#2- We could all use a laugh "
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "liking",
+                                                    "reproach"
+                                                ],
+                                                "trigger": [
+                                                    "#1 i know you like it",
+                                                    "#2 most fun"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "funny",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Haha funny",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "hate it",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "That wasn't needed",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "liking",
+                                                    "reproach"
+                                                ],
+                                                "trigger": [
+                                                    "#1 i know you like it",
+                                                    "#2 most fun"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "funny",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Haha funny",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "hate it",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "That wasn't needed",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3, 
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "distress",
+                    "gratitude"
+                ],
+                "trigger": [
+                    "#1 funnny story",
+                    "#2 amazing story"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "greatday",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "best time of my life",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Wish we could do it all again",
+                                            "#2- It was pretty okay"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "Gratitude",
+                                                    "hate"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm glad we are friends",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Why are we even friends",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "Gratitude",
+                                                    "hate"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm glad we are friends",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Why are we even friends",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "goodbooks",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "Hmph",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Wish we could do it all again",
+                                            "#2- It was pretty okay"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "Gratitude",
+                                                    "hate"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm glad we are friends",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Why are we even friends",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "Gratitude",
+                                                    "hate"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm glad we are friends",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Why are we even friends",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

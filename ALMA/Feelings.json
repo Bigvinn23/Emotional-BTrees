@@ -1,0 +1,153 @@
+{
+    "title": "Introduction",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "ESelector",
+        "title": "ESelector",
+        "type": 3,
+        "description": "",
+        "parameter": [],
+        "children": [
+            {
+                "id": 2,
+                "name": "have feelings",
+                "title": "Action",
+                "type": 2,
+                "description": "I have to tell you that i have feelings for X",
+                "parameters": [],
+                "probabilityOfSuccess": "positive",
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "Popup#1 ",
+                        "title": "Playerchoice",
+                        "type": 5,
+                        "description": "tell a story",
+                        "parameters": [
+                            "#1- I'll help you win her over",
+                            "#2- I also have feelings for her"
+                        ],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "Emotionadder",
+                                "title": "Emotionadder",
+                                "type": 4,
+                                "description": "",
+                                "intensity": "small",
+                                "parameters": [
+                                    "gratitude",
+                                    "fear"
+                                ],
+                                "trigger": [
+                                    "#1 i will help",
+                                    "#2 i also like"
+                                ],
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "ESelector",
+                                        "title": "ESelector",
+                                        "type": 3,
+                                        "description": "",
+                                        "parameter": [],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "funny",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "Thanks i owe you one",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "positive",
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "hate it",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "I dont need your help",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "negative",
+                                                "children": []
+                                            }
+                                        ]
+                                    }]
+                            }]
+                    }]
+            },
+            {
+                "id": 3,
+                "name": "feelings",
+                "title": "Action",
+                "type": 2,
+                "description": "I know you might not care, but i have feelings for X",
+                "parameters": [],
+                "probabilityOfSuccess": "negative",
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "Popup#1 ",
+                        "title": "Playerchoice",
+                        "type": 5,
+                        "description": "tell a story",
+                        "parameters": [
+                            "#1- I'll help you win her over",
+                            "#2- I also have feelings for her"
+                        ],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "Emotionadder",
+                                "title": "Emotionadder",
+                                "type": 4,
+                                "description": "",
+                                "intensity": "small",
+                                "parameters": [
+                                    "gratitude",
+                                    "fear"
+                                ],
+                                "trigger": [
+                                    "#1 i will help",
+                                    "#2 i also like"
+                                ],
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "ESelector",
+                                        "title": "ESelector",
+                                        "type": 3,
+                                        "description": "",
+                                        "parameter": [],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "funny",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "May the best man win",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "positive",
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "hate it",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "Of course you would pull something like this",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "negative",
+                                                "children": []
+                                            }
+                                        ]
+                                    }]
+                            }]
+                    }]
+            }
+        ]
+    }
+}

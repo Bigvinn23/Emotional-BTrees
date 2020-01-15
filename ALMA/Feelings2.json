@@ -1,0 +1,153 @@
+{
+    "title": "Introduction",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "ESelector",
+        "title": "ESelector",
+        "type": 3,
+        "description": "",
+        "parameter": [],
+        "children": [
+            {
+                "id": 2,
+                "name": "have feelings",
+                "title": "Action",
+                "type": 2,
+                "description": "Someone from the party just confessed to me",
+                "parameters": [],
+                "probabilityOfSuccess": "positive",
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "Popup#1 ",
+                        "title": "Playerchoice",
+                        "type": 5,
+                        "description": "tell a story",
+                        "parameters": [
+                            "#1- How do you feel about it?",
+                            "#2- Oh really, this is not very pleasing to me"
+                        ],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "Emotionadder",
+                                "title": "Emotionadder",
+                                "type": 4,
+                                "description": "",
+                                "intensity": "small",
+                                "parameters": [
+                                    "liking",
+                                    "disliking"
+                                ],
+                                "trigger": [
+                                    "#1 how do u feel",
+                                    "#2 i dont like it"
+                                ],
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "ESelector",
+                                        "title": "ESelector",
+                                        "type": 3,
+                                        "description": "",
+                                        "parameter": [],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "funny",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "I'm not sure that is why i came to you",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "positive",
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "hate it",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "I no longer feel like talking to you",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "negative",
+                                                "children": []
+                                            }
+                                        ]
+                                    }]
+                            }]
+                    }]
+            },
+            {
+                "id": 3,
+                "name": "feelings",
+                "title": "Action",
+                "type": 2,
+                "description": "I have no one else i can tell so i will tell you. Someone confessed to me",
+                "parameters": [],
+                "probabilityOfSuccess": "negative",
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "Popup#1 ",
+                        "title": "Playerchoice",
+                        "type": 5,
+                        "description": "tell a story",
+                        "parameters": [
+                            "#1- How do you feel about it?",
+                            "#2- Oh really, this is not very pleasing to me"
+                        ],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "Emotionadder",
+                                "title": "Emotionadder",
+                                "type": 4,
+                                "description": "",
+                                "intensity": "small",
+                                "parameters": [
+                                    "liking",
+                                    "disliking"
+                                ],
+                                "trigger": [
+                                    "#1 how do u feel",
+                                    "#2 i dont like it"
+                                ],
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "ESelector",
+                                        "title": "ESelector",
+                                        "type": 3,
+                                        "description": "",
+                                        "parameter": [],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "funny",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "I know you don't like it but i thought you should know",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "positive",
+                                                "children": []
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "hate it",
+                                                "title": "Action",
+                                                "type": 2,
+                                                "description": "Sorry for coming to you with this. i'll know better next time",
+                                                "parameters": [],
+                                                "probabilityOfSuccess": "negative",
+                                                "children": []
+                                            }
+                                        ]
+                                    }]
+                            }]
+                    }]
+            }
+        ]
+    }
+}

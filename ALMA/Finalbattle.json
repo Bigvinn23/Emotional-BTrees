@@ -1,0 +1,554 @@
+{
+    "title": "finalbattle",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "Popup#1 ",
+        "title": "Playerchoice",
+        "type": 5,
+        "description": "help me",
+        "parameters": [
+            "#1- NPC come save me please, I need you",
+            "#2- Come help me, why do you think i brought you here for?"
+        ],
+        "children": [
+            {
+                "id": 2,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "pride",
+                    "resentment"
+                ],
+                "trigger": [
+                    "#1 Player is nice",
+                    "#2 Player is rude"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "ill save",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I'll save you have no worries",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Damn it, just do your job",
+                                            "#2- Thank you"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "reproach",
+                                                    "pride"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players is rude",
+                                                    "#2 Players is thankful"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "saving",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'll save you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youdie",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm leaving you to die",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "reproach",
+                                                    "pride"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players is rude",
+                                                    "#2 Players is thankful"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "saving",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'll save you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youdie",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm leaving you to die",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "leaveme",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "Seems you do need me after all",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Damn it, just do your job",
+                                            "#2- Thank you"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "reproach",
+                                                    "pride"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players is rude",
+                                                    "#2 Players is thankful"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "saving",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'll save you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youdie",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm leaving you to die",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "reproach",
+                                                    "pride"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players is rude",
+                                                    "#2 Players is thankful"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "saving",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'll save you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youdie",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm leaving you to die",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3, 
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "pride",
+                    "resentment"
+                ],
+                "trigger": [
+                    "#1 Player is nice",
+                    "#2 Player is rude"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "thanks",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I'm going to help you, i'm coming",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Just do what I say",
+                                            "#2- I'll always assist you"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "liking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 do what i say",
+                                                    "#2 i' sorry"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'll save you'",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm leaving you to die",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "liking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 do what i say",
+                                                    "#2 i' sorry"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'll save you'",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm leaving you to die",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "boast",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I should leave you to die",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Just do what I say",
+                                            "#2- I'll always assist you"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "liking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 do what i say",
+                                                    "#2 i' sorry"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'll save you'",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm leaving you to die",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "liking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 do what i say",
+                                                    "#2 i' sorry"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'll save you'",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I'm leaving you to die",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

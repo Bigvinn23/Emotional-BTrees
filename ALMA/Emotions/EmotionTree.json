@@ -1,0 +1,206 @@
+{"title": "EmotionTree",
+  "description": "",
+  "properties": { },
+  "root": {
+    "id": 1,
+    "name": "root",
+    "type": 0,
+    "criteria": ["event", "object", "agent"],
+    "parameter": { },
+    "children": [
+	{
+		"id": 2,
+		"name": "event",
+		"type": 0,
+		"criteria": ["pleased", "displeased"],
+		"parameter": { },
+		"children": [
+		{
+			"id": 3,
+			"name": "pleased",
+			"type": 0,
+			"criteria": ["prospect", "actual"],
+			"parameter": { },
+			"children": [
+			{
+				"id": 4,
+				"name": "prospect",
+				"type": 1,
+				"criteria": ["hope"],
+				"parameter": { },
+				"children": [
+				{
+					
+				}],
+				
+				"id": 5,
+				"name": "actual",
+				"type": 1,
+				"criteria": ["joy"],
+				"parameter": { },
+				"children": [
+				{
+					
+				}]
+				
+			}],
+			
+				"id": 6,
+				"name": "displeased",
+				"type": 0,
+				"criteria": ["prospect", "actual"],
+				"parameter": { },
+				"children": [
+				{
+					"id": 7,
+					"name": "prospect",
+					"type": 1,
+					"criteria": ["fear"],
+					"parameter": { },
+					"children": [
+					{
+						
+					}],
+					
+					"id": 8,
+					"name": "actual",
+					"type": 1,
+					"criteria": ["distress"],
+					"parameter": { },
+					"children": [
+					{
+						
+					}]
+				}]
+		}],
+		
+		"id": 9,
+		"name": "object",
+		"type": 0,
+		"criteria": ["like", "dislike"],
+		"parameter": { },
+		"children":[
+		{
+			"id": 10,
+			"name": "like",
+			"type": 0,
+			"criteria": ["familiar", "unfalimar"],
+			"parameter": { },
+			"children":[
+			{
+				"id": 11,
+				"name": "familiar",
+				"type": 1,
+				"criteria": ["love"],
+				"parameter": { },
+				"children":[
+				{
+				
+				}],
+				
+				"id": 12,
+				"name": "unfamiliar",
+				"type": 1,
+				"criteria": ["interest"],
+				"parameter": { },
+				"children":[
+				{
+				
+				}]
+				
+			}],
+			"id": 13,
+			"name": "dislike",
+			"type": 0,
+			"criteria": ["familiar", "unfalimar"],
+			"parameter": { },
+			"children":[
+			{
+				"id": 14,
+				"name": "familiar",
+				"type": 1,
+				"criteria": ["hate"],
+				"parameter": { },
+				"children":[
+				{
+				
+				}],
+				
+				"id": 15,
+				"name": "unfamiliar",
+				"type": 1,
+				"criteria": ["disgust"],
+				"parameter": { },
+				"children":[
+				{
+				
+				}]
+				
+			}]
+			
+		}],
+		"id": 16,
+		"name": "agent",
+		"type": 0,
+		"criteria": ["approving", "disapproving"],
+		"parameter": { },
+		"children": [
+		{
+			"id": 17,
+			"name": "approving",
+			"type": 0,
+			"criteria": ["self", "other"],
+			"parameter": { },
+			"children": [
+			{
+				"id": 18,
+				"name": "self",
+				"type": 1,
+				"criteria": ["pride"],
+				"parameter": { },
+				"children": [
+				{
+				
+				}],
+				"id": 19,
+				"name": "other",
+				"type": 1,
+				"criteria": ["admiration"],
+				"parameter": { },
+				"children": [
+				{
+				
+				}]
+			}],
+				"id": 20,
+			"name": "disapproving",
+			"type": 0,
+			"criteria": ["self", "other"],
+			"parameter": { },
+			"children": [
+			{
+				"id": 21,
+				"name": "self",
+				"type": 1,
+				"criteria": ["shame"],
+				"parameter": { },
+				"children": [
+				{
+				
+				}],
+				"id": 22,
+				"name": "other",
+				"type": 1,
+				"criteria": ["reproach"],
+				"parameter": { },
+				"children": [
+				{
+				
+				}]
+			}]
+			
+		}]
+		
+	}]
+	}
+}

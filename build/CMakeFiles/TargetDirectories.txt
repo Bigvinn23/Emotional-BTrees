@@ -1,0 +1,3 @@
+C:/Users/shakir/Documents/Visual Studio 2015/Projects/ALMA/build/CMakeFiles/ALMA.dir
+C:/Users/shakir/Documents/Visual Studio 2015/Projects/ALMA/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/shakir/Documents/Visual Studio 2015/Projects/ALMA/build/CMakeFiles/ZERO_CHECK.dir

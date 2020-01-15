@@ -1,0 +1,11 @@
+Emotion,Pleasure,Arousal,Dominance,Mood,Intensity,EmotionPleasure,EmotionArousal,EmotionDominance
+None,0.819,0.743,0.14,Exuberant,fully
+joy,0.874528,0.770764,0.153882,Exuberant,fully,0.4,0.2,0.1
+satisfaction,0.930057,0.798528,0.167764,Exuberant,fully,0.4,0.2,0.1
+hope,1,0.867182,0.169755,Exuberant,fully,0.305798,0.2,0.00579812
+resentment,1,0.935835,0.171745,Exuberant,fully,0.305798,0.2,0.00579812
+reproach,1,1,0.173735,Exuberant,fully,0.305798,0.2,0.00579812
+shame,0.882813,0.882813,0.153376,Exuberant,fully,0.242643,0.189575,-0.0573572
+liking,1,1,0.202728,Exuberant,fully,0.269052,0.148332,0.0611382
+pride,1,1,0.307567,Exuberant,fully,0.335729,0.219183,0.12941
+reproach,1,1,0.428057,Exuberant,fully,0.312138,0.229131,0.134618

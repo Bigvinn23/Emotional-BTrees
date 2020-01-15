@@ -1,0 +1,554 @@
+{
+    "title": "Battle",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "Popup#1 ",
+        "title": "Playerchoice",
+        "type": 5,
+        "description": "fight or run",
+        "parameters": [
+            "#1- Run away guys",
+            "#2- Quickly help him "
+        ],
+        "children": [
+            {
+                "id": 2,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "resentment",
+                    "gratitude"
+                ],
+                "trigger": [
+                    "#1 Player leaves npc to fight alone",
+                    "#2 Player helps npc in fight"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "takecareofself",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "Take care of yourself first",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- I always look out for myself",
+                                            "#2- it was a stategic move"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "satisfaction"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players self interest",
+                                                    "#2 Players valid explanation"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "youknow",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You know what is best",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youfirst",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You always put yourself first",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "satisfaction"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players self interest",
+                                                    "#2 Players valid explanation"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "youknow",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You know what is best",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youfirst",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You always put yourself first",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "leaveme",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "Are you just going to leave me to die?",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- I always look out for myself",
+                                            "#2- it was a stategic move"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "satisfaction"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players self interest",
+                                                    "#2 Players valid explanation"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "youknow",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You know what is best",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youfirst",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You always put yourself first",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "satisfaction"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players self interest",
+                                                    "#2 Players valid explanation"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "youknow",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You know what is best",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youfirst",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You always put yourself first",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3, 
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "resentment",
+                    "gratitude"
+                ],
+                "trigger": [
+                    "#1 Player leaves npc to fight alone",
+                    "#2 Player helps npc in fight"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "thanks",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "Thank you friend i needed the help",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- I'll let you handle it next time",
+                                            "#2- I'll always assist you"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "love"
+                                                ],
+                                                "trigger": [
+                                                    "#1 ill leave you",
+                                                    "#2 Player offers help"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I trust you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You make me wonder",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "love"
+                                                ],
+                                                "trigger": [
+                                                    "#1 ill leave you",
+                                                    "#2 Player offers help"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I trust you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You make me wonder",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "boast",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I could have handled that myself",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- I'll let you handle it next time",
+                                            "#2- I'll always assist you"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "love"
+                                                ],
+                                                "trigger": [
+                                                    "#1 ill leave you",
+                                                    "#2 Player offers help"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I trust you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You make me wonder",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "love"
+                                                ],
+                                                "trigger": [
+                                                    "#1 ill leave you",
+                                                    "#2 Player offers help"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I trust you",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You make me wonder",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

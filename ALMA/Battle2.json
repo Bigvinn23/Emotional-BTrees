@@ -1,0 +1,554 @@
+{
+    "title": "Battle",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "Popup#1 ",
+        "title": "Playerchoice",
+        "type": 5,
+        "description": "fight or run",
+        "parameters": [
+            "#1- That was a disgraceful fight, Wasn't it?",
+            "#2- The Fight went well "
+        ],
+        "children": [
+            {
+                "id": 2,
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "resentment",
+                    "gratitude"
+                ],
+                "trigger": [
+                    "#1 Player insults fight",
+                    "#2 Player compliments fight"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "takecareofself",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I think it went pretty well",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Was terible if you ask me",
+                                            "#2- It was good"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "reproach",
+                                                    "satisfaction"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players says terible fight",
+                                                    "#2 Players says good fight"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "youknow",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I hope we perform like that in the final fight",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youfirst",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We must do better in the final fight",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "reproach",
+                                                    "satisfaction"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players says terible fight",
+                                                    "#2 Players says good fight"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "youknow",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I hope we perform like that in the final fight",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youfirst",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We must do better in the final fight",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "leaveme",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I am ashamed at how the fight played out",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- Was terible if you ask me",
+                                            "#2- It was good"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "reproach",
+                                                    "satisfaction"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players says terible fight",
+                                                    "#2 Players says good fight"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "youknow",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I hope we perform like that in the final fight",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youfirst",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We must do better in the final fight",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 8,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "reproach",
+                                                    "satisfaction"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Players says terible fight",
+                                                    "#2 Players says good fight"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "youknow",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "I hope we perform like that in the final fight",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "youfirst",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We must do better in the final fight",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3, 
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "resentment",
+                    "gratitude"
+                ],
+                "trigger": [
+                    "#1 Player insults fight",
+                    "#2 Player compliments fight"
+                ],
+                "children": [
+                    {
+                        "id": 4,
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": 5,
+                                "name": "thanks",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I think the fight went well",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- I find myself disagreeing",
+                                            "#2- I agree I agree"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "love"
+                                                ],
+                                                "trigger": [
+                                                    "#1 player agrees",
+                                                    "#2 Fplayer disagrees"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Lets keep it up",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We will do better",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "love"
+                                                ],
+                                                "trigger": [
+                                                    "#1 player agrees",
+                                                    "#2 Player offers help"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Lets keep it up",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We will do better",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 6,
+                                "name": "boast",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "We fought like trash",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": 6,
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- I find myself disagreeing",
+                                            "#2- I agree I agree"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "intensity": "small",
+                                                "type": 4,
+                                                "description": "",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "love"
+                                                ],
+                                                "trigger": [
+                                                    "#1 player agrees",
+                                                    "#2 Player offers help"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Lets keep it up",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We will do better",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": 7,
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "disliking",
+                                                    "love"
+                                                ],
+                                                "trigger": [
+                                                    "#1 player agrees",
+                                                    "#2 Player offers help"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": 9,
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": 10,
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Lets keep it up",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": 11,
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "We will do better",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
