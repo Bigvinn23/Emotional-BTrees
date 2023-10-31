@@ -1,0 +1,178 @@
+{
+    "title": "Game Feedback",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": 1,
+        "name": "thanks",
+        "title": "Action",
+        "type": 2,
+        "description": "Hello, how are you liking the game?",
+        "parameters": [],
+        "probabilityOfSuccess": "positive",
+        "children" : [
+            {
+                "id": 2,
+                "name": "Popup#1 ",
+                "title": "Playerchoice",
+                "type": 5,
+                "description": "Give Feedback",
+                "parameters": [
+                    "#1 - It's amazing!!!",
+                    "#2 - It's pretty good!",
+                    "#3 - It's OK",
+                    "#4 - It's kinda bad...",
+                    "#5 - It's garbage"
+                ],
+                "children": [
+                    {
+                        "id": 3,
+                        "name": "Emotionadder",
+                        "title": "Emotionadder",
+                        "type": 4,
+                        "description": "",
+                        "intensity": "large",
+                        "parameters": [
+                            "joy",
+                            "joy",
+                            "satisfaction",
+                            "disappointment",
+                            "disappointment"
+                        ],
+                        "trigger": [
+                            "player gives high compliment",
+                            "player gives compliment",
+                            "player gives neutral answer",
+                            "player gives insult",
+                            "player gives high insult"
+                        ],
+                        "children": [
+                            {
+                                "id": 7,
+                                "name": "ESelector",
+                                "title": "ESelector",
+                                "type": 3,
+                                "description": "",
+                                "parameter": [],
+                                "children": [
+                                    {
+                                        "id": 5,
+                                        "name": "vent",
+                                        "title": "Action",
+                                        "type": 2,
+                                        "description": "Finally, someone gets it! I mean, thanks I guess",
+                                        "parameters": [],
+                                        "probabilityOfSuccess": "negative",
+                                        "children": []
+                                    },
+                                    {
+                                        "id": 5,
+                                        "name": "thank",
+                                        "title": "Action",
+                                        "type": 2,
+                                        "description": "Really? Thank you so much!",
+                                        "parameters": [],
+                                        "probabilityOfSuccess": "positive",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": 4,
+                        "name": "Emotionadder",
+                        "title": "Emotionadder",
+                        "type": 4,
+                        "description": "",
+                        "intensity": "medium",
+                        "parameters": [
+                            "joy",
+                            "joy",
+                            "satisfaction",
+                            "disappointment",
+                            "disappointment"
+                        ],
+                        "trigger": [
+                            "player gives high compliment",
+                            "player gives compliment",
+                            "player gives neutral answer",
+                            "player gives insult",
+                            "player gives high insult"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": 5,
+                        "name": "Emotionadder",
+                        "title": "Emotionadder",
+                        "type": 4,
+                        "description": "",
+                        "intensity": "small",
+                        "parameters": [
+                            "joy",
+                            "joy",
+                            "satisfaction",
+                            "disappointment",
+                            "disappointment"
+                        ],
+                        "trigger": [
+                            "player gives high compliment",
+                            "player gives compliment",
+                            "player gives neutral answer",
+                            "player gives insult",
+                            "player gives high insult"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": 6,
+                        "name": "Emotionadder",
+                        "title": "Emotionadder",
+                        "type": 4,
+                        "description": "",
+                        "intensity": "medium",
+                        "parameters": [
+                            "joy",
+                            "joy",
+                            "satisfaction",
+                            "disappointment",
+                            "disappointment"
+                        ],
+                        "trigger": [
+                            "player gives high compliment",
+                            "player gives compliment",
+                            "player gives neutral answer",
+                            "player gives insult",
+                            "player gives high insult"
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": 4,
+                        "name": "Emotionadder",
+                        "title": "Emotionadder",
+                        "type": 4,
+                        "description": "",
+                        "intensity": "large",
+                        "parameters": [
+                            "joy",
+                            "joy",
+                            "satisfaction",
+                            "disappointment",
+                            "disappointment"
+                        ],
+                        "trigger": [
+                            "player gives high compliment",
+                            "player gives compliment",
+                            "player gives neutral answer",
+                            "player gives insult",
+                            "player gives high insult"
+                        ],
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}

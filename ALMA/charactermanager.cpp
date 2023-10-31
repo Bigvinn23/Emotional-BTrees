@@ -77,7 +77,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		{
 		case 0:// Selector
 		{
-			unique_ptr<Selector> selector = make_unique<Selector>(node["id"].get<int>());
+			unique_ptr<Selector> selector = make_unique<Selector>(node["id"].get<string>());
 			for (auto& child : node["children"])
 			{
 				selector->addChild(processBNode(child));
@@ -87,7 +87,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		}
 		case 1:// Sequence
 		{
-			unique_ptr<Sequence> sequence = make_unique<Sequence>(node["id"].get<int>());
+			unique_ptr<Sequence> sequence = make_unique<Sequence>(node["id"].get<string>());
 			for (auto& child : node["children"])
 			{
 				sequence->addChild(processBNode(child));
@@ -99,7 +99,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		{
 			unique_ptr<Action> action = make_unique<Action>(node["description"].get<string>(),
 				node["probabilityOfSuccess"].get<string>(),
-				node["id"].get<int>());
+				node["id"].get<string>());
 			for (auto& child : node["children"])
 			{
 				action->addChild(processBNode(child));
@@ -110,7 +110,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		case 3:// Eselector
 		{
 
-			unique_ptr<ESelector> eSelector = make_unique<ESelector>(node["id"].get<int>(),
+			unique_ptr<ESelector> eSelector = make_unique<ESelector>(node["id"].get<string>(),
 				node["name"].get<string>(),
 				this);
 			for (auto& child : node["children"])
@@ -146,7 +146,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 				triggers.push_back(trigger.get<std::string>());
 			}
 
-			unique_ptr<EmotionAdder> emotionAdder = make_unique<EmotionAdder>(node["id"].get<int>(),
+			unique_ptr<EmotionAdder> emotionAdder = make_unique<EmotionAdder>(node["id"].get<string>(),
 				thechoices,
 				triggers,
 				this,
@@ -166,7 +166,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 			{
 				thechoices.push_back(choice.get<std::string>());
 			}
-			unique_ptr<PlayerChoice> playerChoice = make_unique<PlayerChoice>(node["id"].get<int>(),
+			unique_ptr<PlayerChoice> playerChoice = make_unique<PlayerChoice>(node["id"].get<string>(),
 				thechoices);
 			for (auto& child : node["children"])
 			{

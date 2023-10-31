@@ -71,7 +71,7 @@ class Selector : public CompositeNode
 {
 public:
 	Selector() = default;
-	Selector(const int id) : Id(id) {}
+	Selector(const std::string id) : Id(id) {}
 	virtual ~Selector() {}
 
 	bool run() override
@@ -83,16 +83,16 @@ public:
 		}
 		return false;
 	}
-	void setId(const int id)
+	void setId(const std::string id)
 	{
 		Id = id;
 	}
-	int getId() const 
+	std::string getId() const 
 	{ 
 		return Id;
 	}
 private:
-	int Id = 0;
+	std::string Id = 0;
 };
 
 class RandomSelector : public CompositeNode
@@ -116,7 +116,7 @@ class Sequence : public CompositeNode
 {
 public:
 	Sequence() = default;
-	Sequence(const int id) : Id(id) {}
+	Sequence(const std::string id) : Id(id) {}
 	virtual ~Sequence() {}
 
 	bool run() override
@@ -128,23 +128,23 @@ public:
 		}
 		return true;
 	}
-	void setId(const int id)
+	void setId(const std::string id)
 	{
 		Id = id;
 	}
-	int getId() const
+	std::string getId() const
 	{
 		return Id;
 	}
 private:
-	int Id = 0;
+	std::string Id = 0;
 };
 
 class ESelector : public CompositeNode
 {
 public:
 	ESelector() = default;
-	ESelector(const int id, std::string Name, CharacterManager* NPC) : Id(id), name(Name), theNPC(NPC){}
+	ESelector(const std::string id, std::string Name, CharacterManager* NPC) : Id(id), name(Name), theNPC(NPC){}
 	virtual ~ESelector() {}
 
 	/*get the emotion vector
@@ -153,16 +153,16 @@ public:
 	take the path that is more dominant*/
 	bool run() override;
 	
-	void setId(const int id)
+	void setId(const std::string id)
 	{
 		Id = id;
 	}
-	int getId() const
+	std::string getId() const
 	{
 		return Id;
 	}
 private:
-	int Id = 0; 
+	std::string Id = 0; 
 	std::string name;
 	CharacterManager* theNPC;
 };
@@ -171,7 +171,7 @@ class EmotionAdder : public CompositeNode
 {
 public:
 	EmotionAdder() = default;
-	EmotionAdder(const int id, std::vector<std::string> thechoice, std::vector<std::string> trigger,  CharacterManager* NPC, double Intensity=0.0) :
+	EmotionAdder(const std::string id, std::vector<std::string> thechoice, std::vector<std::string> trigger,  CharacterManager* NPC, double Intensity=0.0) :
 		Id(id), choices(thechoice), triggers(trigger), theNPC(NPC), intensity(Intensity){	}
 	virtual ~EmotionAdder() {}
 
@@ -179,16 +179,16 @@ public:
 	bool run() override { return true; }
 
 	bool run(int _playerChoice);
-	void setId(const int id)
+	void setId(const std::string id)
 	{
 		Id = id;
 	}
-	int getId() const
+	std::string getId() const
 	{
 		return Id;
 	}
 private:
-	int Id = 0;
+	std::string Id = 0;
 	std::vector<std::string> choices;
 	std::vector<std::string> triggers;
 	CharacterManager *theNPC;
@@ -228,14 +228,14 @@ class PlayerChoice : public CompositeNode
 {
 public:
 	PlayerChoice() = default;
-	PlayerChoice(const int id, std::vector<std::string> thechoices) : Id(id), choices(thechoices) {}
+	PlayerChoice(const std::string id, std::vector<std::string> thechoices) : Id(id), choices(thechoices) {}
 	virtual ~PlayerChoice() {}
 
 	bool run() override
 	{
 		// present choice here
 		
-		std::cout << "\n Choose an option from below\n\n ";
+		std::cout << "\n Choose an option from below\n\n";
 		for (auto& decision : choices)
 		{
 			std::cout << decision << "\n\n";
@@ -264,16 +264,16 @@ public:
 		
 		return true;
 	}
-	void setId(const int id)
+	void setId(const std::string id)
 	{
 		Id = id;
 	}
-	int getId() const
+	std::string getId() const
 	{
 		return Id;
 	}
 private:
-	int Id = 0;
+	std::string Id = 0;
 	std::vector<std::string> choices;
 };
 
@@ -281,9 +281,9 @@ class Action : public CompositeNode
 {
 public:
 	Action() = default;
-	Action(const std::string& newName, const std::string& prob, const int myid)
+	Action(const std::string& newName, const std::string& prob, const std::string myid)
 		: output(newName), probabilityOfSuccess(prob), Id(myid) {}
-	int getId() { return Id; }
+	std::string getId() { return Id; }
 	std::string getProb() { return probabilityOfSuccess; }
 private:
 	virtual bool run() override
@@ -299,7 +299,7 @@ private:
 		return true;
 	}
 
-	int Id;
+	std::string Id;
 	std::string output;
 	std::string probabilityOfSuccess;
 };
