@@ -15,11 +15,6 @@
 #include <stdio.h>  
 #include <stdlib.h>
 
-#include <cgicc/CgiDefs.h> 
-#include <cgicc/Cgicc.h> 
-#include <cgicc/HTTPHTMLHeader.h> 
-#include <cgicc/HTMLClasses.h> 
-
 AppraisalRules* addRules(const json& node, CharacterManager* npc)
 {
 	AppraisalRules* rule = new AppraisalRules();
@@ -104,32 +99,69 @@ AppraisalRules* addRules(const json& node, CharacterManager* npc)
 	std::string filename = "./output/-HighPosExtraNoMem.csv";
 	std::string filename1 = "./output/HighPosNeuro-Memorycapture.csv";
 
+
+
 int main4(int argc, char *argv[])
 {
+	cout << "Hello World!\nThis is " << argv[0];
+
 	return 0;
 }
 
-int main3()
+int main(int argc, char *argv[])
 {
-	//int ans;
-	//cin >> ans;
+
+	// declare the necessary things
+	Personality personality = Personality(0.04, 0.02, 0.05, 0.01, 0.01);//ocean
+	AffectConsts* affectconstant = new AffectConsts();
+	//	affectconstant->moodStabilityControlledByNeurotism = true;
+	DecayFunction* decayfunction = new LinearDecayFunction();
+
+	std::list<EmotionType> emotionlist = { Joy, Distress, HappyFor, Gloating, Resentment, Pity, Hope, Fear,
+		Satisfaction, Relief, FearsConfirmed, Disappointment, Pride, Admiration,
+		Shame, Reproach, Liking, Disliking, Gratitude, Anger, Gratification,
+		Remorse, Love, Hate, Physical };
 
 
-	cout << "Content-type:text/html\r\n\r\n";
-	cout << "<h2 class='text-slate-900'>Hello World! This is my first CGI program\r\n";
+	// create the charmanager
+	string npcName = "john";
+	CharacterManager npc(npcName, personality, affectconstant, false, decayfunction, emotionlist);
 
-	//cout << getenv("QUERY_STRING");
-	cout << "</h2>\r\n";
+	json apprasialRules;
+	ifstream inputFile{ "ApprasialVariables1.json" };
+	if (inputFile.bad() || inputFile.fail())
+	{
 
-	//int* ptr = nullptr;
-	//int& ref = *ptr;
+		cerr << "Failed to open 'AppraisalVariables.json'." << endl;
+		exit;
+	}
+	inputFile >> apprasialRules;
+	npc.setAppraisalRules(addRules(apprasialRules, &npc));
 
-	cout << "<h2 class='text-slate'>Hello World!" << "This is my first CGI program</h2>\r\n";
+	// create the tree(s)
+	//npc.createTree("feedback", "ProgrammerFeedback.json");
+	npc.createTree("feedback", "Introduction_new_ids.json");
 
+	std::string id = "", endType = "playerchoice";
+	int choice;
+
+	id = npc.runTree("feedback", id, endType);
+
+	while (id.compare("") != 0)
+	{
+		cout << "Choice: ";
+		cin >> choice;
+		id = npc.runTree("feedback", id, endType, choice);
+	}
+
+	// run the tree(s)
+	//npc.runTree("feedback");
+
+	system("pause");
 	return 0;
 }
 
-int main()
+int main2()
 {
 
 	// declare the necessary things
@@ -147,17 +179,9 @@ int main()
 	// create the charmanager
 	string npcName;
 	std::cout << "NPC Name: ";
-	std::cin >> npcName; // get npc name as input
+	//std::cin >> npcName; // get npc name as input
+	cout << "hi1\n";
 	CharacterManager npc(npcName, personality, affectconstant, false, decayfunction, emotionlist);
-
-
-	ofstream outputFile;
-	outputFile.open(filename);
-	// write the file headers
-	outputFile << "Emotion" << "," << "Pleasure" << "," << "Arousal" << "," << "Dominance" << "," << "Mood" << "," << "Intensity" << "," << "EmotionPleasure" << "," << "EmotionArousal" << "," << "EmotionDominance" << std::endl;
-	outputFile << "None" << "," << npc.getCurrentMood().getPleasure() << "," << npc.getCurrentMood().getArousal() << "," << npc.getCurrentMood().getDominance() << "," << npc.getCurrentMood().getMoodWord() << "," << npc.getCurrentMood().getMoodWordIntensity()
-		<< std::endl;
-	outputFile.close();
 
 
 	json apprasialRules;

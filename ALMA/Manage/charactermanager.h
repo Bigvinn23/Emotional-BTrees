@@ -143,6 +143,8 @@ using namespace std;
 
 	 bool runTree(std::string treename);
 
+	 std::string runTree(std::string treename, std::string targetId, std::string endType, int choice = -1);
+
 	 void configSetup();
 	
 

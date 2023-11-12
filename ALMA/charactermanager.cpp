@@ -202,6 +202,12 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		return true;
 	}
 
+	// overloaded runTree func
+	std::string CharacterManager::runTree(std::string treename, std::string targetId, std::string endType, int choice)
+	{
+		return treeHolder[treename]->getRoot()->run(targetId, endType, choice);
+	}
+
 	void CharacterManager::configSetup()
 	{
 		json setupFormat;

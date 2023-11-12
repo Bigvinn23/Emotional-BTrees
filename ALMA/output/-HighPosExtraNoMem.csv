@@ -1,4 +1,5 @@
 Emotion,Pleasure,Arousal,Dominance,Mood,Intensity,EmotionPleasure,EmotionArousal,EmotionDominance
 None,0.1219,0.1143,0.1068,Exuberant,slightly
 joy,0.2219,0.15279,0.115333,Exuberant,slightly,0.4,0.2,0.1
-hope,0.297334,0.194658,-0.0846671,Dependent,slightly,0.3,0.2,0
+disliking,0.3219,0.188694,0.120167,Exuberant,slightly,0.4,0.2,0.1
+joy,0.2219,0.15279,0.115333,Exuberant,slightly,0.4,0.2,0.1
