@@ -101,14 +101,14 @@ AppraisalRules* addRules(const json& node, CharacterManager* npc)
 
 
 
-int main4(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	cout << "Hello World!\nThis is " << argv[0];
 
 	return 0;
 }
 
-int main(int argc, char *argv[])
+int main3(int argc, char *argv[])
 {
 
 	// declare the necessary things
@@ -143,15 +143,19 @@ int main(int argc, char *argv[])
 	npc.createTree("feedback", "Introduction_new_ids.json");
 
 	std::string id = "", endType = "playerchoice";
-	int choice;
+	int choice, turn = 1;
 
+	cout << "\n\n\nTurn " << turn << "\n";
 	id = npc.runTree("feedback", id, endType);
 
 	while (id.compare("") != 0)
 	{
 		cout << "Choice: ";
 		cin >> choice;
+		turn++;
+		cout << "\n\n\nTurn " << turn << "\n";
 		id = npc.runTree("feedback", id, endType, choice);
+		//system("pause");
 	}
 
 	// run the tree(s)
@@ -223,18 +227,18 @@ int main_old()
 	CharacterManager shakir ("shakir", personality, affectconstant, false, decayfunction, emotionlist);
 	CharacterManager notshakir("notshakir", Personality(-0.1, -0.1, -0.1, -0.1, -0.1), affectconstant, false, decayfunction, emotionlist);
 
-	ofstream outputFile;
-	outputFile.open(filename);
+	// ofstream outputFile;
+	// outputFile.open(filename);
 	// write the file headers
-	outputFile << "Emotion" << "," << "Pleasure" << "," << "Arousal" << "," << "Dominance" << "," << "Mood" << "," << "Intensity" << "," << "EmotionPleasure" << "," << "EmotionArousal" << "," << "EmotionDominance" << std::endl;
-	outputFile << "None" << "," << shakir.getCurrentMood().getPleasure() << "," << shakir.getCurrentMood().getArousal() << "," << shakir.getCurrentMood().getDominance() << "," << shakir.getCurrentMood().getMoodWord() << "," << shakir.getCurrentMood().getMoodWordIntensity()
-		 << std::endl;
-	outputFile.close();
+	// outputFile << "Emotion" << "," << "Pleasure" << "," << "Arousal" << "," << "Dominance" << "," << "Mood" << "," << "Intensity" << "," << "EmotionPleasure" << "," << "EmotionArousal" << "," << "EmotionDominance" << std::endl;
+	// outputFile << "None" << "," << shakir.getCurrentMood().getPleasure() << "," << shakir.getCurrentMood().getArousal() << "," << shakir.getCurrentMood().getDominance() << "," << shakir.getCurrentMood().getMoodWord() << "," << shakir.getCurrentMood().getMoodWordIntensity()
+	//	 << std::endl;
+	// outputFile.close();
 
-	outputFile.open(filename1);
-	// write the file headers
-	outputFile << "Name" << "," << "Emotion" << "," << "Intensity" <<  std::endl;
-	outputFile.close();
+	// outputFile.open(filename1);
+	// // write the file headers
+	// outputFile << "Name" << "," << "Emotion" << "," << "Intensity" <<  std::endl;
+	// outputFile.close();
 	
 
 
