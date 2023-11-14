@@ -42,7 +42,7 @@ using json = nlohmann::json;
 using namespace std;
 
 
-ofstream outputFile;
+//ofstream outputFile;
 std::string filename1 = "./test/negativemed-Memorycapture.csv";
 
 	
@@ -259,6 +259,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		std::list<EmotionType> emotions)
 		:EntityManager(name)
 	{
+		std::cout << "hello/n";
 		//appraisalManagerInstance = new AppraisalManager();
 		srand(static_cast <unsigned> (time(0)));
 		memDecayTime = 0.0;
@@ -593,11 +594,11 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 			appraisalManagerInstance->processBasicECC(appvar, this, Elictor);
 			computeMood();
 
-			outputFile.open(filename1, ios::out | ios::app);
 			//outputFile.open(filename1, ios::out | ios::app);
-			outputFile << longMem->name << ","
-				<< longMem->emotion << "," << longMem->intensity << "," <<  "," << longMem->reaction << ","  << std::endl;
-			outputFile.close();
+			//outputFile.open(filename1, ios::out | ios::app);
+			//outputFile << longMem->name << ","
+			//	<< longMem->emotion << "," << longMem->intensity << "," <<  "," << longMem->reaction << ","  << std::endl;
+			//outputFile.close();
 		}
 		
 	}

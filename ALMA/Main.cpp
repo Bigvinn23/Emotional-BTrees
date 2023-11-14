@@ -101,14 +101,14 @@ AppraisalRules* addRules(const json& node, CharacterManager* npc)
 
 
 
-int main(int argc, char *argv[])
+int main4(int argc, char *argv[])
 {
 	cout << "Hello World!\nThis is " << argv[0];
 
 	return 0;
 }
 
-int main3(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 
 	// declare the necessary things

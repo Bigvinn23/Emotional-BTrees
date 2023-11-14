@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 
-ofstream outputFile;
+//ofstream outputFile;
 std::string filename = "./output/HighNegAgreeNoMem.csv";
 
 // the new run function for the ESelector node
@@ -918,14 +918,14 @@ bool EmotionAdder::run(int _playerChoice)
 	// sending to memory 
 	//theNPC->sendToMem(key,theNPC->getName(), triggers[_playerChoice], theNPC->getCurrentMood(), intensity, triggers[_playerChoice]);
 	
-	outputFile.open(filename, ios::out | ios::app);
+	//outputFile.open(filename, ios::out | ios::app);
 
-	outputFile << choices[_playerChoice] << ","
-		<< theNPC->getCurrentMood().getPleasure() << "," << theNPC->getCurrentMood().getArousal() << "," 
-		<< theNPC->getCurrentMood().getDominance() << "," << theNPC->getCurrentMood().getMoodWord() << "," 
-		<< theNPC->getCurrentMood().getMoodWordIntensity() << "," << theNPC->getMoodEngine()->getEmotionsCenter()->getPValue() << "," 
-		<< theNPC->getMoodEngine()->getEmotionsCenter()->getAValue() << "," << theNPC->getMoodEngine()->getEmotionsCenter()->getDValue() << std::endl;
-	outputFile.close();
+	//outputFile << choices[_playerChoice] << ","
+	//	<< theNPC->getCurrentMood().getPleasure() << "," << theNPC->getCurrentMood().getArousal() << "," 
+	//	<< theNPC->getCurrentMood().getDominance() << "," << theNPC->getCurrentMood().getMoodWord() << "," 
+	//	<< theNPC->getCurrentMood().getMoodWordIntensity() << "," << theNPC->getMoodEngine()->getEmotionsCenter()->getPValue() << "," 
+	//	<< theNPC->getMoodEngine()->getEmotionsCenter()->getAValue() << "," << theNPC->getMoodEngine()->getEmotionsCenter()->getDValue() << std::endl;
+	//outputFile.close();
 	theNPC->getMoodEngine()->getEmotionsCenter()->getPValue();
 	
 	switch (getTypeByName(choices[_playerChoice]))
