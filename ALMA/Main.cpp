@@ -101,14 +101,73 @@ AppraisalRules* addRules(const json& node, CharacterManager* npc)
 
 
 
-int main4(int argc, char *argv[])
+int main5(int argc, char *argv[])
 {
-	cout << "Hello World!\nThis is " << argv[0];
+	cout << "Hello World!\nThis is " << argv[0] << "\nThe date is: " << argv[1];
 
 	return 0;
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
+{
+
+	// declare the necessary things
+	Personality personality = Personality(0.04, 0.02, 0.05, 0.01, 0.01);//ocean
+	AffectConsts* affectconstant = new AffectConsts();
+	//	affectconstant->moodStabilityControlledByNeurotism = true;
+	DecayFunction* decayfunction = new LinearDecayFunction();
+
+	std::list<EmotionType> emotionlist = { Joy, Distress, HappyFor, Gloating, Resentment, Pity, Hope, Fear,
+		Satisfaction, Relief, FearsConfirmed, Disappointment, Pride, Admiration,
+		Shame, Reproach, Liking, Disliking, Gratitude, Anger, Gratification,
+		Remorse, Love, Hate, Physical };
+
+
+	// create the charmanager
+	string npcName = "john";
+	CharacterManager npc(npcName, personality, affectconstant, false, decayfunction, emotionlist);
+
+	json apprasialRules;
+	ifstream inputFile{ "ApprasialVariables1.json" };
+	if (inputFile.bad() || inputFile.fail())
+	{
+
+		cerr << "Failed to open 'AppraisalVariables.json'." << endl;
+		exit;
+	}
+	inputFile >> apprasialRules;
+	npc.setAppraisalRules(addRules(apprasialRules, &npc));
+
+	// create the tree(s)
+	//npc.createTree("feedback", "ProgrammerFeedback.json");
+	npc.createTree("feedback", "Introduction_new_ids.json");
+
+	std::string targetId;
+
+	if (argv[1] == " ")
+	{
+		targetId = "";
+	}
+	else
+	{
+		targetId = argv[1];
+	}
+	//std::string targetId = argv[1];
+	std::string endType = argv[2];
+	int choice = stoi(argv[3]);
+
+	//cout << targetId << endl << endType << endl << choice;
+
+	// run the tree with the commandline args
+	std::string returnId = npc.runTree("feedback", targetId, endType, choice);
+
+	cout << endl <<  returnId << endl;
+
+	//system("pause");
+	return 0;
+}
+
+int main3(int argc, char *argv[])
 {
 
 	// declare the necessary things

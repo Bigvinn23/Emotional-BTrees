@@ -1,0 +1,24 @@
+{
+    "PleasureRelation": [1.0 ,1.0, 1.0 ,1.0 ,0.19],
+    "ArousalRelation": [1.0 ,1.0, 1.0 ,1.0 ,-0.57],
+    "DominanceRelation": [1.0 ,1.0, 1.0 ,-0.32 ,-0.0],
+
+    "OpennessRelation": [0.16, 0.24, 0.46],
+    "ConscientiousnessRelation": [0.29, 0.0, 0.19],
+    "ExtraversionRelation": [0.29, 0.0, 0.59],
+    "AgreeablenessRelation": [0.74, 0.13, -0.18],
+    "NeurotismRelation": [0.43, -0.49, 0.0],
+
+    "emotioninfluence" : 0.2,
+    "EmotionMaxBaseline" : 0.40,
+    "Emotiondecaytime" : 24000 ,
+    "Emotiondecayperiod": 510 ,
+    "Emotiondecayfunction": "hyperbolic",
+    "emotionDecaySteps": 47 ,
+
+
+    "moodReturnOverallTime": 600000,
+    "moodReturnPeriod": 500,
+    "moodReturnSteps": 1200,
+    "Moodneurotismstability": false
+}

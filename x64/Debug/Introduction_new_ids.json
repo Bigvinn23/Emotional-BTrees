@@ -1,0 +1,554 @@
+{
+    "title": "Introduction",
+    "description": "",
+    "properties": [],
+    "root": {
+        "id": "R",
+        "name": "Popup#1 ",
+        "title": "Playerchoice",
+        "type": 5,
+        "description": "intro the npc",
+        "parameters": [
+            "#1- This is my esteemed Partner ",
+            "#2- This is my servant "
+        ],
+        "children": [
+            {
+                "id": "R-0",
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "joy",
+                    "disappointment"
+                ],
+                "trigger": [
+                    "#1 Player compliments NPC",
+                    "#2 Player is rude to NPC"
+                ],
+                "children": [
+                    {
+                        "id": "R-0-0",
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": "R-0-0-0",
+                                "name": "thanks",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "Thank you",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": "R-0-0-0-0",
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- No problem, you are an important member of the team",
+                                            "#2- I choose not to make you look bad"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": "R-0-0-0-0-0",
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "hope",
+                                                    "disliking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": "R-0-0-0-0-0-0",
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": "R-0-0-0-0-0-0-0",
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You are too kind",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": "R-0-0-0-0-0-0-1",
+                                                                "name": "notthanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Yea sureee",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": "R-0-0-0-0-1",
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "hope",
+                                                    "disliking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": "R-0-0-0-0-1-0",
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": "R-0-0-0-0-1-0-0",
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You are making me blush",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": "R-0-0-0-0-1-0-1",
+                                                                "name": "notthanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Yea sureee",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "R-0-0-1",
+                                "name": "thats right",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "That is right ",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": "R-0-0-1-0",
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- No problem, you are an important member of the team",
+                                            "#2- I choose not to make you look bad"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": "R-0-0-1-0-0",
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "hope",
+                                                    "disliking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": "R-0-0-1-0-0-0",
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": "R-0-0-1-0-0-0-0",
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You are making me blush",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": "R-0-0-1-0-0-0-1",
+                                                                "name": "notthanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Yea sureee",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": "R-0-0-1-0-1",
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "hope",
+                                                    "disliking"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": "R-0-0-1-0-1-0",
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": "R-0-0-1-0-1-0-0",
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You are making me blush",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": "R-0-0-1-0-1-0-1",
+                                                                "name": "notthanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "Yea sureee",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "R-1",
+                "name": "Emotionadder",
+                "title": "Emotionadder",
+                "type": 4,
+                "description": "",
+                "intensity": "small",
+                "parameters": [
+                    "joy",
+                    "disappointment"
+                ],
+                "trigger": [
+                    "#1 Player compliments NPC",
+                    "#2 Player is rude to NPC"
+                ],
+                "children": [
+                    {
+                        "id": "R-1-0",
+                        "name": "ESelector",
+                        "title": "ESelector",
+                        "type": 3,
+                        "description": "",
+                        "parameter": [],
+                        "children": [
+                            {
+                                "id": "R-1-0-0",
+                                "name": "rebuke",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I am not your servant, I am your partner get that right",
+                                "parameters": [],
+                                "probabilityOfSuccess": "negative",
+                                "children": [
+                                    {
+                                        "id": "R-1-0-0-0",
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- it was just a slip of the tongue, i meant no offence",
+                                            "#2- You think too highly of yourself"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": "R-1-0-0-0-0",
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "relief",
+                                                    "anger"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": "R-1-0-0-0-0-0",
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": "R-1-0-0-0-0-0-0",
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "hmm okay",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": "R-1-0-0-0-0-0-1",
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You believe that you are so great",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": "R-1-0-0-0-1",
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "relief",
+                                                    "anger"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": "R-1-0-0-0-1-0",
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": "R-1-0-0-0-1-0-0",
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "hmm okay",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": "R-1-0-0-0-1-0-1",
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You believe that you are so great",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "R-1-0-1",
+                                "name": "suck up",
+                                "title": "Action",
+                                "type": 2,
+                                "description": "I am more of a partner, am i not friend?",
+                                "parameters": [],
+                                "probabilityOfSuccess": "positive",
+                                "children": [
+                                    {
+                                        "id": "R-1-0-1-0",
+                                        "name": "Popup#1 ",
+                                        "title": "Playerchoice",
+                                        "type": 5,
+                                        "description": "reply to npcc #1",
+                                        "parameters": [
+                                            "#1- it was just a slip of the tongue, i meant no offence",
+                                            "#2- You think too highly of yourself"
+                                        ],
+                                        "children": [
+                                            {
+                                                "id": "R-1-0-1-0-0",
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "relief",
+                                                    "anger"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": "R-1-0-1-0-0-0",
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": "R-1-0-1-0-0-0-0",
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "hmm okay",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": "R-1-0-1-0-0-0-1",
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You believe that you are so great",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "id": "R-1-0-1-0-1",
+                                                "name": "Emotionadder",
+                                                "title": "Emotionadder",
+                                                "type": 4,
+                                                "description": "",
+                                                "intensity": "small",
+                                                "parameters": [
+                                                    "relief",
+                                                    "anger"
+                                                ],
+                                                "trigger": [
+                                                    "#1 Player compliments NPC",
+                                                    "#2 Player is insults to NPC"
+                                                ],
+                                                "children": [
+                                                    {
+                                                        "id": "R-1-0-1-0-1-0",
+                                                        "name": "ESelector",
+                                                        "title": "ESelector",
+                                                        "type": 3,
+                                                        "description": "",
+                                                        "parameter": [],
+                                                        "children": [
+                                                            {
+                                                                "id": "R-1-0-1-0-1-0-0",
+                                                                "name": "thanks",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "hmm okay",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "positive",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "id": "R-1-0-1-0-1-0-1",
+                                                                "name": "dissing",
+                                                                "title": "Action",
+                                                                "type": 2,
+                                                                "description": "You believe that you are so great",
+                                                                "parameters": [],
+                                                                "probabilityOfSuccess": "negative",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
