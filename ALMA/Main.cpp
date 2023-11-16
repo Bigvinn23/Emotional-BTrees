@@ -161,7 +161,7 @@ int main(int argc, char* argv[])
 	// run the tree with the commandline args
 	std::string returnId = npc.runTree("feedback", targetId, endType, choice);
 
-	cout << endl <<  returnId << endl;
+	cout << "\"returnId\":\"" << returnId << "\"" << endl;
 
 	//system("pause");
 	return 0;

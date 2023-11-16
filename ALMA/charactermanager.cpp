@@ -259,7 +259,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		std::list<EmotionType> emotions)
 		:EntityManager(name)
 	{
-		std::cout << "hello/n";
+		//std::cout << "hello/n";
 		//appraisalManagerInstance = new AppraisalManager();
 		srand(static_cast <unsigned> (time(0)));
 		memDecayTime = 0.0;

@@ -17,9 +17,9 @@ std::string ESelector::run(std::string targetId, std::string endType, int choice
 		//check NPC mood state
 		std::string mood = theNPC->getCurrentMood().getMoodWord();
 
-		std::cout << theNPC->getCurrentMood().padString() << std::endl;
-		std::cout << theNPC->getName() << " is feeling " << mood << std::endl;
-		std::cout << "\n";
+		//std::cout << theNPC->getCurrentMood().padString() << std::endl;
+		std::cout << "\"npcMood\":\"" << theNPC->getName() << " is feeling " << mood << "\"" <<  std::endl;
+		//std::cout << "\n";
 		if (mood == "Exuberant" or mood == "Dependent" or mood == "Relaxed" or mood == "Docile")
 		{
 			for (auto& child : getChildren())
@@ -128,7 +128,7 @@ std::string EmotionAdder::run(std::string targetId, std::string endType, int cho
 		intensity = intensityMap[choices[choice]];
 		std::shared_ptr<Emotion::Elicit> Elictor = std::make_shared<Emotion::Elicit>(triggers[choice]);
 
-		std::cout << "Added- ";
+		std::cout << "\"emotionAdded\":[\""; // << "Added- ";
 		switch (getTypeByName(choices[choice]))
 		{
 		case EmotionType::Admiration:
@@ -364,13 +364,13 @@ std::string EmotionAdder::run(std::string targetId, std::string endType, int cho
 			break;
 		}
 		}
-		std::cout << endl;
+		std::cout << "\"";
 
 		appraisalManagerInstance->processBasicECC(appvar, theNPC, Elictor);
 		theNPC->computeMood();
 		theNPC->incermentTime();
 
-
+		std::cout << ",\"";
 		switch (getTypeByName(choices[choice]))
 		{
 		case EmotionType::Admiration:
@@ -605,7 +605,7 @@ std::string EmotionAdder::run(std::string targetId, std::string endType, int cho
 			break;
 		}
 		}
-
+		std::cout << "\"]" << endl;
 
 
 		// check if node is end of chain (is end type and not the initial target)

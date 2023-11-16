@@ -354,7 +354,7 @@ public:
 		// so it proceeds as if it has already gotten it and doesnt display the choices
 		if (distance(targetId, Id) == 0)
 		{
-			std::cout << targetId << "\t" << Id << std::endl;
+			//std::cout << targetId << "\t" << Id << std::endl;
 			//if child is a emotion adder pass the choice down else just run
 			Node* temp = nullptr;
 			if (choice >= getChildren().size())
@@ -376,10 +376,12 @@ public:
 		// if this is the case treat do not ask for input, just print the choices
 		else if (endType.compare("playerchoice") == 0 && distance(targetId, Id) > 0)
 		{
+			std::cout << "\"choices\":[";
 			for (auto& decision : choices)
 			{
-				std::cout << decision << "\n";
+				std::cout << "\"" << decision << "\"\n";
 			}
+			std::cout << "]\n";
 			return Id;
 		}
 
@@ -432,7 +434,7 @@ public:
 		// check if this node should run (is target or is after target)
 		if (distance(targetId, Id) >= 0)
 		{
-			std::cout << std::endl << output << std::endl;
+			std::cout << "\"response\":\"" << output << "\"" << std::endl;
 
 			// check if node is end of chain (is end type and not the initial target)
 			if (endType.compare("action") == 0 && distance(targetId, Id) != 0)
