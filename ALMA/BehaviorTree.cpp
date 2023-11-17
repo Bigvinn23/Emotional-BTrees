@@ -18,7 +18,7 @@ std::string ESelector::run(std::string targetId, std::string endType, int choice
 		std::string mood = theNPC->getCurrentMood().getMoodWord();
 
 		//std::cout << theNPC->getCurrentMood().padString() << std::endl;
-		std::cout << "\"npcMood\":\"" << theNPC->getName() << " is feeling " << mood << "\"" <<  std::endl;
+		//std::cout << "\"npcMood\":\"" << mood << "\"" <<  std::endl;
 		//std::cout << "\n";
 		if (mood == "Exuberant" or mood == "Dependent" or mood == "Relaxed" or mood == "Docile")
 		{

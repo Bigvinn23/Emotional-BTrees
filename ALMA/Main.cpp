@@ -163,6 +163,10 @@ int main(int argc, char* argv[])
 
 	cout << "\"returnId\":\"" << returnId << "\"" << endl;
 
+	// get and print the npcs mood
+	std::string mood = npc.getCurrentMood().getMoodWord();
+	std::cout << "\"npcMood\":\"" << mood << "\"" << std::endl;
+
 	//system("pause");
 	return 0;
 }
