@@ -7,9 +7,24 @@
 //#include "MoodType.h"
 #include<ctime>
 
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
 class Mood {
 
  private:
+	 friend ostream& operator<<(ostream& out, const Mood& m)
+	 {
+		 return m.write(out);
+	 }
+
+	 friend istream& operator>>(istream& in, Mood& m)
+	 {
+		 return m.read(in);
+	 }
+
 	 enum MoodIntensity : size_t { neutral, slightly, moderate, fully };
 	 bool empty = true;
 
@@ -73,6 +88,31 @@ class Mood {
 		dominance = Dominance;
 		empty = false;
 	}
+
+
+	 ostream& write(ostream& out) const
+	 {
+		 out << empty << ","
+			 << pleasure << ","
+			 << arousal << ","
+			 << dominance << "\n";
+		 return out;
+	 }
+
+	 istream& read(istream& in)
+	 {
+		 string s;
+		 getline(in, s, ',');
+		 empty = std::stoi(s);
+		 getline(in, s, ',');
+		 pleasure = stod(s);
+		 getline(in, s, ',');
+		 arousal = stod(s);
+		 getline(in, s);
+		 dominance = stod(s);
+		 in.ignore(numeric_limits<streamsize>::max(), '\n');
+		 return in;
+	 }
 
 	 bool getEmpty() { return empty; }
 	 double getPleasure() {

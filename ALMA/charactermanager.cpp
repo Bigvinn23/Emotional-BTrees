@@ -1099,4 +1099,29 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 	}
 
 
+	void CharacterManager::loadMemory(std::string filename)
+	{
+		ifstream memFile;
+		memFile.open(filename);
+
+		if (memFile.is_open())
+		{
+			//memory.read(memFile);
+			memFile >> memory;
+		}
+
+		memFile.close();
+	}
+
+	void CharacterManager::saveMemory(std::string filename)
+	{
+		ofstream memFile;
+		memFile.open(filename);
+
+		//memory.write(memFile);
+		memFile << memory;
+
+		memFile.close();
+	}
+
 PersonalityMoodRelations* CharacterManager::instance = nullptr;

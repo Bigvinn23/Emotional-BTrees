@@ -8,9 +8,23 @@
 #include "Apprasial/apprasialvariables.h"
 #include <vector>
 
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
 class Memory
 {
 private:
+	friend ostream& operator<<(ostream& out, const Memory& m)
+	{
+		return m.write(out);
+	}
+
+	friend istream& operator>>(istream& in, Memory& m)
+	{
+		return m.read(in);
+	}
 	
 public:
 
@@ -19,6 +33,53 @@ public:
 	
 	std::vector<shortTermMem*> Short;
 	std::vector<longTermMem*> Long;
+
+	ostream& write(ostream& out) const
+	{
+		for (shortTermMem* mem : Short)
+		{
+			out << "1\n";
+			out << mem;
+		}
+		out << "0\n";
+
+		for (longTermMem* mem : Long)
+		{
+			out << "1\n";
+			out << mem;
+		}
+		out << "0\n";
+		return out;
+	}
+
+	istream& read(istream& in)
+	{
+		string s;
+		shortTermMem* sMem;
+		longTermMem* lMem;
+		getline(in, s);
+
+		while (stoi(s) == 1)
+		{
+			sMem = new shortTermMem();
+			in >> *sMem;
+			Short.emplace_back(sMem);
+			getline(in, s);
+		}
+
+		getline(in, s);
+
+		while (stoi(s) == 1)
+		{
+			lMem = new longTermMem();
+			in >> *lMem;
+			Long.emplace_back(lMem);
+			getline(in, s);
+		}
+
+		in.ignore(numeric_limits<streamsize>::max(), '\n');
+		return in;
+	}
 
 	void addShortMemory(std::string emo, std::string Name, std::string Trigger, Mood theMood, double intensity, std::string memname)// std::string Reaction,
 	{

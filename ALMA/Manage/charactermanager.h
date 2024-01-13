@@ -136,6 +136,9 @@ using namespace std;
  public:
 
 	 unique_ptr<Node> processBNode(const json& node);
+
+	 void loadMemory(std::string filename);
+	 void saveMemory(std::string filename);
 	 
 
 	 void createTree(std::string treename, std::string filename);

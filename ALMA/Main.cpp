@@ -127,21 +127,6 @@ int main(int argc, char* argv[])
 	string npcName = "john";
 	CharacterManager npc(npcName, personality, affectconstant, false, decayfunction, emotionlist);
 
-	json apprasialRules;
-	ifstream inputFile{ "ApprasialVariables1.json" };
-	if (inputFile.bad() || inputFile.fail())
-	{
-
-		cerr << "Failed to open 'AppraisalVariables.json'." << endl;
-		exit;
-	}
-	inputFile >> apprasialRules;
-	npc.setAppraisalRules(addRules(apprasialRules, &npc));
-
-	// create the tree(s)
-	//npc.createTree("feedback", "ProgrammerFeedback.json");
-	npc.createTree("feedback", "Introduction_new_ids.json");
-
 	std::string targetId;
 
 	if (argv[1] == " ")
@@ -156,10 +141,32 @@ int main(int argc, char* argv[])
 	std::string endType = argv[2];
 	int choice = stoi(argv[3]);
 
+	json apprasialRules;
+	ifstream inputFile{ "ApprasialVariables1.json" };
+	if (inputFile.bad() || inputFile.fail())
+	{
+
+		cerr << "Failed to open 'AppraisalVariables.json'." << endl;
+		exit;
+	}
+	inputFile >> apprasialRules;
+	npc.setAppraisalRules(addRules(apprasialRules, &npc));
+
+	// create the tree(s)
+	//npc.createTree("feedback", "ProgrammerFeedback.json");
+	npc.createTree("feedback", argv[4]);
+
+
 	//cout << targetId << endl << endType << endl << choice;
+
+	// load memory
+	npc.loadMemory(argv[5]);
 
 	// run the tree with the commandline args
 	std::string returnId = npc.runTree("feedback", targetId, endType, choice);
+
+	// save memory
+	npc.saveMemory(argv[5]);
 
 	cout << "\"returnId\":\"" << returnId << "\"" << endl;
 
@@ -274,7 +281,7 @@ int main2()
 	return 0;
 }
 
-int main_old()
+int main1()
 {	
 	Narrator narrator= Narrator();
 	Personality personality = Personality(0.04,0.02,0.05,0.01,0.01);//ocean
@@ -381,6 +388,8 @@ int main_old()
 	});
 	
 	ever_lasting.join();*/
+
+	shakir.saveMemory("C:/xampp/htdocs/projects/cpp-server-2/scripts/memory.txt");
 	system("pause");
 	return 0;
 }
