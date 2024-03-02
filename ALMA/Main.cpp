@@ -15,6 +15,11 @@
 #include <stdio.h>  
 #include <stdlib.h>
 
+//Jason Added
+#include "json.hpp"
+using json = nlohmann::json;
+
+
 AppraisalRules* addRules(const json& node, CharacterManager* npc)
 {
 	AppraisalRules* rule = new AppraisalRules();
@@ -124,7 +129,11 @@ int main(int argc, char* argv[])
 
 
 	// create the charmanager
-	string npcName = "john";
+	string npcName = "John";
+	if (argv[6]) {
+		npcName = argv[6];
+	}
+	
 	CharacterManager npc(npcName, personality, affectconstant, false, decayfunction, emotionlist);
 
 	std::string targetId;
@@ -160,13 +169,13 @@ int main(int argc, char* argv[])
 	//cout << targetId << endl << endType << endl << choice;
 
 	// load memory
-	npc.loadMemory(argv[5]);
+	//npc.loadMemory(argv[5]);
 
 	// run the tree with the commandline args
 	std::string returnId = npc.runTree("feedback", targetId, endType, choice);
 
 	// save memory
-	npc.saveMemory(argv[5]);
+	//npc.saveMemory(argv[5]);
 
 	cout << "\"returnId\":\"" << returnId << "\"" << endl;
 

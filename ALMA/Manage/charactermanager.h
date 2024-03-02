@@ -150,7 +150,7 @@ using namespace std;
 
 	 void configSetup();
 	
-
+	 bool remember(string name);
 	 CharacterManager(std::string name, Personality personality,
 		 AffectConsts* ac, bool derivedPersonality,
 		 DecayFunction* decayFunction,
@@ -160,7 +160,7 @@ using namespace std;
 	 void incermentTime();
 
 
-	 void sendToMem(std::string emotion, std::string name, std::string Trigger,  Mood theMood, double intensity, std::string memname);//std::string reaction,
+	 void sendToMem(std::string emotion, std::string name, std::string Trigger,  Mood theMood, double intensity, std::string memname, bool sendtomem = true);//std::string reaction,
 
 	 void 
 		 emotionAffector(std::string memoryName);

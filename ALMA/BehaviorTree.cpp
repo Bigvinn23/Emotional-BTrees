@@ -1,9 +1,13 @@
 #include "BehaviorTree.h"
 #include "Manage/charactermanager.h"
 #include"AppraisalManager.h"
-
+#include <mutex>
 #include <vector>
 #include <string>
+//Jason Added
+#include "json.hpp"
+using json = nlohmann::json;
+
 
 //ofstream outputFile;
 std::string filename = "./output/HighNegAgreeNoMem.csv";
@@ -117,6 +121,23 @@ std::string EmotionAdder::run(std::string targetId, std::string endType, int cho
 		{
 			choice = 0;
 		}
+		//Jason Added
+		std::once_flag onceFlag;
+
+		std::call_once(onceFlag, [this] {
+			json longmemoryrecovery;
+			ifstream inputFile{ "C:/Users/jason/OneDrive/Desktop/Research Project/Server/Memoryfile.json" };
+			if (inputFile.bad()) {
+				cerr << "Failed to open 'Memoryfile.json'." << endl;
+			}
+			longmemoryrecovery = json::parse(inputFile);
+			for (auto it = longmemoryrecovery.begin(); it != longmemoryrecovery.end(); ++it) {
+				if (theNPC->getName() == (*it)[0]["name"]) {
+					Mood temp = Mood((*it)[0]["Pleasure"], (*it)[0]["Arousal"], (*it)[0]["Dominance"]);
+					theNPC->sendToMem((*it)[0]["emotion"], (*it)[0]["name"], (*it)[0]["Trigger"], temp, (*it)[0]["intensity"], (*it)[0]["memname"], false);
+				}
+			}
+		});
 
 		theNPC->emotionAffector(theNPC->getName());// makes the memmory impact the emotional state of the npc;
 		AppraisalVariables* appvar = new AppraisalVariables();
@@ -369,6 +390,37 @@ std::string EmotionAdder::run(std::string targetId, std::string endType, int cho
 		appraisalManagerInstance->processBasicECC(appvar, theNPC, Elictor);
 		theNPC->computeMood();
 		theNPC->incermentTime();
+		//Jason Added
+		theNPC->sendToMem(key, theNPC->getName(), triggers[choice], theNPC->getCurrentMood(), intensity, triggers[choice]);
+
+		json lastdata;
+		ifstream inputFile{ "C:/Users/jason/OneDrive/Desktop/Research Project/Server/Lastdata.json" };
+		if (inputFile.bad()) {
+			cerr << "Failed to open 'Lastdata.json'." << endl;
+		}
+
+		lastdata = json::parse(inputFile);
+		for (auto it = lastdata.begin(); it != lastdata.end(); ++it) {
+			if ((*it)[0]["name"].get<std::string>() == theNPC->getName()) {
+				(*it)[0]["Pleasure"] = theNPC->getCurrentMood().getPleasure();
+				(*it)[0]["Arousal"] = theNPC->getCurrentMood().getArousal();
+				(*it)[0]["Dominance"] = theNPC->getCurrentMood().getDominance();
+				(*it)[0]["Mood"] = theNPC->getCurrentMood().getMoodWord();
+				break;
+			}
+
+		}
+
+		// Write updated JSON data to file
+		std::ofstream outFile("C:/Users/jason/OneDrive/Desktop/Research Project/Server/Lastdata.json");
+		if (outFile.is_open()) {
+			outFile << std::setw(4) << lastdata << std::endl;
+			outFile.close();
+		}
+		else {
+			std::cerr << "Error opening file for writing.\n";
+		}
+
 
 		std::cout << ",\"";
 		switch (getTypeByName(choices[choice]))
