@@ -15,10 +15,10 @@
 #include <stdio.h>  
 #include <stdlib.h>
 
-#include <cgicc/CgiDefs.h> 
-#include <cgicc/Cgicc.h> 
-#include <cgicc/HTTPHTMLHeader.h> 
-#include <cgicc/HTMLClasses.h> 
+//Jason Added
+#include "json.hpp"
+using json = nlohmann::json;
+
 
 AppraisalRules* addRules(const json& node, CharacterManager* npc)
 {
@@ -104,32 +104,147 @@ AppraisalRules* addRules(const json& node, CharacterManager* npc)
 	std::string filename = "./output/-HighPosExtraNoMem.csv";
 	std::string filename1 = "./output/HighPosNeuro-Memorycapture.csv";
 
-int main4(int argc, char *argv[])
+
+
+int main5(int argc, char *argv[])
 {
-	return 0;
-}
-
-int main3()
-{
-	//int ans;
-	//cin >> ans;
-
-
-	cout << "Content-type:text/html\r\n\r\n";
-	cout << "<h2 class='text-slate-900'>Hello World! This is my first CGI program\r\n";
-
-	//cout << getenv("QUERY_STRING");
-	cout << "</h2>\r\n";
-
-	//int* ptr = nullptr;
-	//int& ref = *ptr;
-
-	cout << "<h2 class='text-slate'>Hello World!" << "This is my first CGI program</h2>\r\n";
+	cout << "Hello World!\nThis is " << argv[0] << "\nThe date is: " << argv[1];
 
 	return 0;
 }
 
-int main()
+int main(int argc, char* argv[])
+{
+
+	// declare the necessary things
+	Personality personality = Personality(0.04, 0.02, 0.05, 0.01, 0.01);//ocean
+	AffectConsts* affectconstant = new AffectConsts();
+	//	affectconstant->moodStabilityControlledByNeurotism = true;
+	DecayFunction* decayfunction = new LinearDecayFunction();
+
+	std::list<EmotionType> emotionlist = { Joy, Distress, HappyFor, Gloating, Resentment, Pity, Hope, Fear,
+		Satisfaction, Relief, FearsConfirmed, Disappointment, Pride, Admiration,
+		Shame, Reproach, Liking, Disliking, Gratitude, Anger, Gratification,
+		Remorse, Love, Hate, Physical };
+
+
+	// create the charmanager
+	string npcName = "John";
+	if (argv[6]) {
+		npcName = argv[6];
+	}
+	
+	CharacterManager npc(npcName, personality, affectconstant, false, decayfunction, emotionlist);
+
+	std::string targetId;
+
+	if (argv[1] == " ")
+	{
+		targetId = "";
+	}
+	else
+	{
+		targetId = argv[1];
+	}
+	//std::string targetId = argv[1];
+	std::string endType = argv[2];
+	int choice = stoi(argv[3]);
+
+	json apprasialRules;
+	ifstream inputFile{ "ApprasialVariables1.json" };
+	if (inputFile.bad() || inputFile.fail())
+	{
+
+		cerr << "Failed to open 'AppraisalVariables.json'." << endl;
+		exit;
+	}
+	inputFile >> apprasialRules;
+	npc.setAppraisalRules(addRules(apprasialRules, &npc));
+
+	// create the tree(s)
+	//npc.createTree("feedback", "ProgrammerFeedback.json");
+	npc.createTree("feedback", argv[4]);
+
+
+	//cout << targetId << endl << endType << endl << choice;
+
+	// load memory
+	//npc.loadMemory(argv[5]);
+
+	// run the tree with the commandline args
+	std::string returnId = npc.runTree("feedback", targetId, endType, choice);
+
+	// save memory
+	//npc.saveMemory(argv[5]);
+
+	cout << "\"returnId\":\"" << returnId << "\"" << endl;
+
+	// get and print the npcs mood
+	std::string mood = npc.getCurrentMood().getMoodWord();
+	std::cout << "\"npcMood\":\"" << mood << "\"" << std::endl;
+
+	//system("pause");
+	return 0;
+}
+
+int main3(int argc, char *argv[])
+{
+
+	// declare the necessary things
+	Personality personality = Personality(0.04, 0.02, 0.05, 0.01, 0.01);//ocean
+	AffectConsts* affectconstant = new AffectConsts();
+	//	affectconstant->moodStabilityControlledByNeurotism = true;
+	DecayFunction* decayfunction = new LinearDecayFunction();
+
+	std::list<EmotionType> emotionlist = { Joy, Distress, HappyFor, Gloating, Resentment, Pity, Hope, Fear,
+		Satisfaction, Relief, FearsConfirmed, Disappointment, Pride, Admiration,
+		Shame, Reproach, Liking, Disliking, Gratitude, Anger, Gratification,
+		Remorse, Love, Hate, Physical };
+
+
+	// create the charmanager
+	string npcName = "john";
+	CharacterManager npc(npcName, personality, affectconstant, false, decayfunction, emotionlist);
+
+	json apprasialRules;
+	ifstream inputFile{ "ApprasialVariables1.json" };
+	if (inputFile.bad() || inputFile.fail())
+	{
+
+		cerr << "Failed to open 'AppraisalVariables.json'." << endl;
+		exit;
+	}
+	inputFile >> apprasialRules;
+	npc.setAppraisalRules(addRules(apprasialRules, &npc));
+
+	// create the tree(s)
+	//npc.createTree("feedback", "ProgrammerFeedback.json");
+	npc.createTree("feedback", "Introduction_new_ids.json");
+
+	std::string id = "", endType = "playerchoice";
+	int choice, turn = 1;
+
+	cout << "\n\n\nTurn " << turn << "\n";
+	id = npc.runTree("feedback", id, endType);
+
+	while (id.compare("") != 0)
+	{
+		cout << "Choice: ";
+		cin >> choice;
+		turn++;
+		cout << "\n\n\nTurn " << turn << "\n";
+		id = npc.runTree("feedback", id, endType, choice);
+		//system("pause");
+	}
+
+	// run the tree(s)
+	//npc.runTree("feedback");
+
+	system("pause");
+	return 0;
+}
+
+int main2()
 {
 
 	// declare the necessary things
@@ -147,17 +262,9 @@ int main()
 	// create the charmanager
 	string npcName;
 	std::cout << "NPC Name: ";
-	std::cin >> npcName; // get npc name as input
+	//std::cin >> npcName; // get npc name as input
+	cout << "hi1\n";
 	CharacterManager npc(npcName, personality, affectconstant, false, decayfunction, emotionlist);
-
-
-	ofstream outputFile;
-	outputFile.open(filename);
-	// write the file headers
-	outputFile << "Emotion" << "," << "Pleasure" << "," << "Arousal" << "," << "Dominance" << "," << "Mood" << "," << "Intensity" << "," << "EmotionPleasure" << "," << "EmotionArousal" << "," << "EmotionDominance" << std::endl;
-	outputFile << "None" << "," << npc.getCurrentMood().getPleasure() << "," << npc.getCurrentMood().getArousal() << "," << npc.getCurrentMood().getDominance() << "," << npc.getCurrentMood().getMoodWord() << "," << npc.getCurrentMood().getMoodWordIntensity()
-		<< std::endl;
-	outputFile.close();
 
 
 	json apprasialRules;
@@ -183,7 +290,7 @@ int main()
 	return 0;
 }
 
-int main_old()
+int main1()
 {	
 	Narrator narrator= Narrator();
 	Personality personality = Personality(0.04,0.02,0.05,0.01,0.01);//ocean
@@ -199,18 +306,18 @@ int main_old()
 	CharacterManager shakir ("shakir", personality, affectconstant, false, decayfunction, emotionlist);
 	CharacterManager notshakir("notshakir", Personality(-0.1, -0.1, -0.1, -0.1, -0.1), affectconstant, false, decayfunction, emotionlist);
 
-	ofstream outputFile;
-	outputFile.open(filename);
+	// ofstream outputFile;
+	// outputFile.open(filename);
 	// write the file headers
-	outputFile << "Emotion" << "," << "Pleasure" << "," << "Arousal" << "," << "Dominance" << "," << "Mood" << "," << "Intensity" << "," << "EmotionPleasure" << "," << "EmotionArousal" << "," << "EmotionDominance" << std::endl;
-	outputFile << "None" << "," << shakir.getCurrentMood().getPleasure() << "," << shakir.getCurrentMood().getArousal() << "," << shakir.getCurrentMood().getDominance() << "," << shakir.getCurrentMood().getMoodWord() << "," << shakir.getCurrentMood().getMoodWordIntensity()
-		 << std::endl;
-	outputFile.close();
+	// outputFile << "Emotion" << "," << "Pleasure" << "," << "Arousal" << "," << "Dominance" << "," << "Mood" << "," << "Intensity" << "," << "EmotionPleasure" << "," << "EmotionArousal" << "," << "EmotionDominance" << std::endl;
+	// outputFile << "None" << "," << shakir.getCurrentMood().getPleasure() << "," << shakir.getCurrentMood().getArousal() << "," << shakir.getCurrentMood().getDominance() << "," << shakir.getCurrentMood().getMoodWord() << "," << shakir.getCurrentMood().getMoodWordIntensity()
+	//	 << std::endl;
+	// outputFile.close();
 
-	outputFile.open(filename1);
-	// write the file headers
-	outputFile << "Name" << "," << "Emotion" << "," << "Intensity" <<  std::endl;
-	outputFile.close();
+	// outputFile.open(filename1);
+	// // write the file headers
+	// outputFile << "Name" << "," << "Emotion" << "," << "Intensity" <<  std::endl;
+	// outputFile.close();
 	
 
 
@@ -290,6 +397,8 @@ int main_old()
 	});
 	
 	ever_lasting.join();*/
+
+	shakir.saveMemory("C:/xampp/htdocs/projects/cpp-server-2/scripts/memory.txt");
 	system("pause");
 	return 0;
 }

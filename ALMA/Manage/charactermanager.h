@@ -136,6 +136,9 @@ using namespace std;
  public:
 
 	 unique_ptr<Node> processBNode(const json& node);
+
+	 void loadMemory(std::string filename);
+	 void saveMemory(std::string filename);
 	 
 
 	 void createTree(std::string treename, std::string filename);
@@ -143,9 +146,11 @@ using namespace std;
 
 	 bool runTree(std::string treename);
 
+	 std::string runTree(std::string treename, std::string targetId, std::string endType, int choice = -1);
+
 	 void configSetup();
 	
-
+	 bool remember(string name);
 	 CharacterManager(std::string name, Personality personality,
 		 AffectConsts* ac, bool derivedPersonality,
 		 DecayFunction* decayFunction,
@@ -155,7 +160,7 @@ using namespace std;
 	 void incermentTime();
 
 
-	 void sendToMem(std::string emotion, std::string name, std::string Trigger,  Mood theMood, double intensity, std::string memname);//std::string reaction,
+	 void sendToMem(std::string emotion, std::string name, std::string Trigger,  Mood theMood, double intensity, std::string memname, bool sendtomem = true);//std::string reaction,
 
 	 void 
 		 emotionAffector(std::string memoryName);

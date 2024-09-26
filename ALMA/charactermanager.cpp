@@ -42,7 +42,7 @@ using json = nlohmann::json;
 using namespace std;
 
 
-ofstream outputFile;
+//ofstream outputFile;
 std::string filename1 = "./test/negativemed-Memorycapture.csv";
 
 	
@@ -178,7 +178,89 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		}
 		return result;
 	}
+	/*
+	Checks a json file that contains information about each NPC and checks if the NPC exists already before setting default values.
+	*/
+	bool CharacterManager::remember(string name) {
+		json lastdata;
 
+		ifstream inputFile{ "C:/Users/jason/OneDrive/Desktop/Research Project/Server/Lastdata.json" };
+		if (inputFile.bad()) {
+			cerr << "Failed to open 'Lastdata.json'." << endl;
+		}
+
+		lastdata = json::parse(inputFile);
+
+		//Check the file to see if the npc was created previously
+		for (auto it = lastdata.begin(); it != lastdata.end(); ++it) {
+			if ((*it)[0]["name"].get<std::string>() == name) {
+				double pleasure = (*it)[0]["Pleasure"];
+				double arousal = (*it)[0]["Arousal"];
+				double dominance = (*it)[0]["Dominance"];
+				fDefaultMood = Mood(pleasure, arousal, dominance);
+				fCurrentMood = Mood(pleasure, arousal, dominance);
+				return true;
+			}
+
+		}
+
+		// Find the next available NPC number
+		int nextNpcNumber = 1;
+		while (lastdata.find("NPC" + std::to_string(nextNpcNumber)) != lastdata.end()) {
+			++nextNpcNumber;
+		}
+
+		json newNpcData;
+		newNpcData["name"] = name;
+		newNpcData["Mood"] = "";
+		newNpcData["Pleasure"] = 0.00;
+		newNpcData["Arousal"] = 0.00;
+		newNpcData["Dominance"] = 0.00;
+
+		lastdata["NPC" + std::to_string(nextNpcNumber)] = json{ {newNpcData} };
+
+		// Write updated JSON data to file
+		std::ofstream outFile("C:/Users/jason/OneDrive/Desktop/Research Project/Server/Lastdata.json");
+		if (outFile.is_open()) {
+			outFile << std::setw(4) << lastdata << std::endl;
+			outFile.close();
+			//std::cout << "NPC" << nextNpcNumber << " added to the JSON file.\n";
+		}
+		else {
+			std::cerr << "Error opening file for writing.\n";
+		}
+	
+		return false;
+	
+	// Function to add NPC data
+	// Load JSON data from file
+		
+
+		/*json lastdata;
+		// Construct new NPC data
+		json newNpcData;
+		newNpcData["name"] = "NewNPC"; // Just for testing
+		newNpcData["Mood"] = "";
+		newNpcData["Pleasure"] = "0.00";
+		newNpcData["Arousal"] = "0.00";
+		newNpcData["Dominance"] = "0.00";
+
+		// Add new NPC data to existing JSON
+		lastdata["NPC" + std::to_string(1)] = newNpcData;
+
+		// Write updated JSON data to file
+		std::ofstream outFile("C:/xampp/htdocs/research/cpp-server-2/scripts/Lastdata.json");
+		if (!outFile.is_open()) {
+			std::cerr << "Error opening file for writing." << std::endl;
+			return 1;
+		}
+
+		outFile << std::setw(4) << lastdata; // Dump JSON with indentation
+		outFile.close();
+		std::cout << "NPC data successfully written to the JSON file." << std::endl;
+
+		return false;*/
+	}
 	void CharacterManager::createTree(std::string treename, std::string filename)
 	{
 		json behaviourFormat;
@@ -200,6 +282,12 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 	{
 		treeHolder[treename]->getRoot()->run();
 		return true;
+	}
+
+	// overloaded runTree func
+	std::string CharacterManager::runTree(std::string treename, std::string targetId, std::string endType, int choice)
+	{
+		return treeHolder[treename]->getRoot()->run(targetId, endType, choice);
 	}
 
 	void CharacterManager::configSetup()
@@ -253,6 +341,7 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		std::list<EmotionType> emotions)
 		:EntityManager(name)
 	{
+		//std::cout << "hello/n";
 		//appraisalManagerInstance = new AppraisalManager();
 		srand(static_cast <unsigned> (time(0)));
 		memDecayTime = 0.0;
@@ -264,8 +353,39 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		fAvailEmotions = emotions;
 		fPersEmoRels = personality.getPersonalityEmotionsRelations();
 		configSetup();
-		fDefaultMood = getInstance()->getDefaultMood(personality);
-		fCurrentMood = getInstance()->getDefaultMood(personality);
+		if (!remember(name)) {
+			fDefaultMood = getInstance()->getDefaultMood(personality);
+			fCurrentMood = getInstance()->getDefaultMood(personality);
+		
+			json lastdata;
+			ifstream input1File{ "C:/Users/jason/OneDrive/Desktop/Research Project/Server/Lastdata.json" };
+			if (input1File.bad()) {
+				cerr << "Failed to open 'Lastdata.json'." << endl;
+			}
+
+			lastdata = json::parse(input1File);
+			for (auto it = lastdata.begin(); it != lastdata.end(); ++it) {
+				if ((*it)[0]["name"].get<std::string>() == name) {
+					(*it)[0]["Pleasure"] = fCurrentMood.getPleasure();
+					(*it)[0]["Arousal"] = fCurrentMood.getArousal();
+					(*it)[0]["Dominance"] = fCurrentMood.getDominance();
+					(*it)[0]["Mood"] = fCurrentMood.getMoodWord();
+					break;
+				}
+
+
+			}
+
+			// Write updated JSON data to file
+			std::ofstream outFile("C:/Users/jason/OneDrive/Desktop/Research Project/Server/Lastdata.json");
+			if (outFile.is_open()) {
+				outFile << std::setw(4) << lastdata << std::endl;
+				outFile.close();
+			}
+			else {
+				std::cerr << "Error opening file for writing.\n";
+			}
+		}
 		// Setup emotion processing
 		fEmotionVector = createEmotionVector();
 		fEmotionHistory = new EmotionHistory();
@@ -309,10 +429,48 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 
 
 
-	void CharacterManager::sendToMem(std::string emotion, std::string name, std::string Trigger,  Mood theMood, double intensity, std::string memname)//std::string reaction,
+	void CharacterManager::sendToMem(std::string emotion, std::string name, std::string Trigger,  Mood theMood, double intensity, std::string memname, bool sendtomemfile)//std::string reaction,
 	{
 		MemoryNames.emplace_back(memname);	
 		memory.addShortMemory(emotion, name, Trigger,  theMood, intensity, memname);//reaction,
+
+		if (sendtomemfile == true) {
+			//Jason Added
+			json memorybackup;
+			ifstream inputFile{ "C:/Users/jason/OneDrive/Desktop/Research Project/Server/Memoryfile.json" };
+			if (inputFile.bad()) {
+				cerr << "Failed to open 'Memoryfile.json'." << endl;
+			}
+			memorybackup = json::parse(inputFile);
+
+			int memoryNumber = 1;
+			while (memorybackup.find("Memory" + std::to_string(memoryNumber)) != memorybackup.end()) {
+				++memoryNumber;
+			}
+
+			json newMemoryData;
+			newMemoryData["emotion"] = emotion;
+			newMemoryData["name"] = name;
+			newMemoryData["Trigger"] = Trigger;
+			newMemoryData["Pleasure"] = theMood.getPleasure();
+			newMemoryData["Arousal"] = theMood.getArousal();
+			newMemoryData["Dominance"] = theMood.getDominance();
+			newMemoryData["intensity"] = intensity;
+			newMemoryData["memname"] = memname;
+
+			memorybackup["Memory" + std::to_string(memoryNumber)] = json{ {newMemoryData} };
+
+			// Write updated JSON data to file
+			std::ofstream outFile("C:/Users/jason/OneDrive/Desktop/Research Project/Server/Memoryfile.json");
+			if (outFile.is_open()) {
+				outFile << std::setw(4) << memorybackup << std::endl;
+				outFile.close();
+				//std::cout << "NPC" << memoryNumber << " added to the JSON file.\n";
+			}
+			else {
+				std::cerr << "Error opening file for writing.\n";
+			}
+		}
 	}
 
 	void CharacterManager::incermentTime()
@@ -587,11 +745,11 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 			appraisalManagerInstance->processBasicECC(appvar, this, Elictor);
 			computeMood();
 
-			outputFile.open(filename1, ios::out | ios::app);
 			//outputFile.open(filename1, ios::out | ios::app);
-			outputFile << longMem->name << ","
-				<< longMem->emotion << "," << longMem->intensity << "," <<  "," << longMem->reaction << ","  << std::endl;
-			outputFile.close();
+			//outputFile.open(filename1, ios::out | ios::app);
+			//outputFile << longMem->name << ","
+			//	<< longMem->emotion << "," << longMem->intensity << "," <<  "," << longMem->reaction << ","  << std::endl;
+			//outputFile.close();
 		}
 		
 	}
@@ -1091,5 +1249,30 @@ std::string filename1 = "./test/negativemed-Memorycapture.csv";
 		bye->run();
 	}
 
+
+	void CharacterManager::loadMemory(std::string filename)
+	{
+		ifstream memFile;
+		memFile.open(filename);
+
+		if (memFile.is_open())
+		{
+			//memory.read(memFile);
+			memFile >> memory;
+		}
+
+		memFile.close();
+	}
+
+	void CharacterManager::saveMemory(std::string filename)
+	{
+		ofstream memFile;
+		memFile.open(filename);
+
+		//memory.write(memFile);
+		memFile << memory;
+
+		memFile.close();
+	}
 
 PersonalityMoodRelations* CharacterManager::instance = nullptr;
